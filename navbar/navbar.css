@@ -1,0 +1,148 @@
+/* Navbar Container */
+#navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background: linear-gradient(90deg,#0d0d0d,#1a1a1a,#2b2b2b,#1a1a1a,#0d0d0d);
+     /* Black background */
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0; /* Make the navbar start from the left edge */
+    right: 0; /* Extend the navbar to the right edge */
+    z-index: 1000;
+    box-shadow: transparent;
+    box-sizing: border-box;
+    height: 80px; /* Fixed height for the navbar */
+}
+#navbar:focus{
+    background: transparent;
+    outline:none;
+}
+
+/* Push the content below the fixed navbar */
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    padding-top: 80px; /* Same height as the navbar */
+}
+
+/* Logo */
+#logo {
+    flex: 1; /* Align the logo to the left */
+    height: 50px; /* Set the logo height */
+    width: 150px; /* Adjust width as needed */
+    background-image: url('./logo.png'); /* Path to the logo */
+    background-size: contain; /* Ensure the image fits the container */
+    background-repeat: no-repeat; /* Prevent tiling */
+    background-position: center left; /* Align image to the left-center */
+}/* Logo Text */
+#logo-text {
+      font-size: 1.rem; /* Adjust font size for text */
+      color: white;
+      font-weight: bold;
+      text-transform: uppercase;
+      white-space: nowrap; /* Prevent text wrapping */
+      display: inline;
+  }
+  
+  /* Style for the "N" */
+  #logo-n {
+      color: red; /* Set the "N" to be red */
+      display: inline;
+  }
+
+/* Menu */
+#menu {
+    display: flex;
+    gap: 20px; /* Space between menu items */
+    justify-content: center; /* Center the menu items */
+    flex: 2; /* Allocate more space for centering */
+}
+
+.menu-item {
+    font-size: 1rem;
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    text-decoration: none;
+    position: relative;
+    transition: color 0.3s ease;
+    cursor: pointer;
+}
+
+.menu-item:hover {
+    color: red; /* Green hover effect */
+    background: transparent;
+}
+
+.menu-item::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    height: 2px;
+    width: 0;
+    background: red
+; /* Green underline effect */
+    transition: width 0.3s ease;
+}
+
+.menu-item:hover::after {
+    width: 100%;
+}
+
+/* Sign-in Box */
+#sign-in-box {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* Align sign-in to the right */
+    padding: 0 15px;
+    border: 2px solid white; /* Border around the button */
+    border-radius: 25px;
+    white-space: nowrap; /* Prevent line breaks */
+    flex: 0; /* Remove extra space allocation */
+    height: 40px; /* Standard height for the button */
+    background-color: transparent; /* Transparent background */
+}
+
+#sign-in-button {
+    text-decoration:none;
+    background-color: transparent;
+    color: white;
+    border: none;
+    font-size: 0.9rem; /* Slightly smaller font */
+    cursor: pointer;
+    text-transform: uppercase;
+    padding: 5px 10px; /* Adjust button padding */
+    transition: color 0.3s ease, background-color 0.3s ease;
+    outline: none;
+}
+
+#sign-in-button:hover {
+    color: #04e234; /* Green hover effect */
+    background-color: rgba(255, 255, 255, 0.1); /* Slight background highlight */
+    border-radius: 20px;
+}
+
+/* Responsive Layout for Smaller Screens */
+@media (max-width: 768px) {
+    #navbar {
+        flex-wrap: wrap;
+        height: auto; /* Adjust navbar height on smaller screens */
+    }
+
+    #menu {
+        flex: 0 0 100%;
+        justify-content: center;
+        gap: 15px;
+        margin-top: 10px;
+    }
+
+    #sign-in-box {
+        margin-top: 10px;
+        height: auto; /* Allow the box to resize if needed */
+    }
+}

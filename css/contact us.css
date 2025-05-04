@@ -1,0 +1,14 @@
+body{
+  height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url(../images/IMG-20250111-WA0012.jpg);
+  background-size:contain;
+
+  background-position:unset ;
+  color:white;
+  }
+  h1{
+    color: #eeecec;
+  }
+  span{
+    color: red;}

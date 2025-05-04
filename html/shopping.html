@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Shop</title>
+    <link rel="stylesheet" href="../css/shopping.css">
+</head>
+<body>
+    <header>
+        <h1>Fitness Shop</h1>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#products">Products</a>
+            <a href="#cart">Cart</a>
+        </nav>
+    </header>
+
+    <section id="products">
+        <h2>Our Products</h2>
+        <div class="product-container">
+            <!-- Product 1 -->
+            <div class="product">
+                <img src="dumbbell.jpg" alt="Dumbbell">
+                <h3>Dumbbell</h3>
+                <p>Price: ₹500</p>
+                <button onclick="addToCart('Dumbbell', 500)">Add to Cart</button>
+            </div>
+            <!-- Product 2 -->
+            <div class="product">
+                <img src="yoga-mat.jpg" alt="Yoga Mat">
+                <h3>Yoga Mat</h3>
+                <p>Price: ₹1000</p>
+                <button onclick="addToCart('Yoga Mat', 1000)">Add to Cart</button>
+            </div>
+            <!-- Product 3 -->
+            <div class="product">
+                <img src="protein-powder.jpg" alt="Protein Powder">
+                <h3>Protein Powder</h3>
+                <p>Price: ₹1500</p>
+                <button onclick="addToCart('Protein Powder', 1500)">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="cart">
+        <h2>Your Cart</h2>
+        <div id="cart-items"></div>
+        <p id="total-price">Total: ₹0</p>
+        <button onclick="checkout()">Checkout</button>
+    </section>
+
+    <script src="../js/shopping.js"></script>
+</body>
+
+
+  <footer>
+    <div class="footer-container">
+          <link rel="stylesheet" href="../css/footer.css">
+          <a href="../html/home.html" class="footer-button">Previous Page</a>
+          <a href="../html/shopping.html" class="footer-button">Shop  with Us</a>
+          <a href="#top" class="footer-button">Top of Page</a>
+          
+          <div class="social-icons">
+              <a href="https://twitter.com" target="_blank">
+                  <img src="../images/footer image/image/twitter.jpg" alt="Twitter">
+              </a>
+              <a href="https://mail.google.com" target="_blank">
+                  <img src="../images/footer image/image/gmail.png" alt="Gmail">
+              </a>
+              <a href="https://instagram.com" target="_blank">
+                  <img src="../images/footer image/image/instagram.png" alt="Instagram">
+              </a>
+              <a href="https://facebook.com" target="_blank">
+                  <img src="../images/footer image/image/facebook.jpg" alt="Facebook">
+              </a>
+          </div>
+      </div>
+      
+  </footer>
+
+  <script src="../js/shopping.js"></script>
+</body>
+</html>

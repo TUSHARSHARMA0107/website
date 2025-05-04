@@ -1,0 +1,77 @@
+body {
+      font-family: 'Arial', sans-serif;
+      background-color: transparent; /* Dark background */
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      color: #fbf8f8; /* White text for contrast */
+    }
+    
+    .bmi-container {
+      background: #1e1e1e; /* Dark card background */
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+      padding: 20px;
+      text-align: center;
+      width: 90%;
+      max-width: 400px;
+    }
+    
+    h1 {
+      color: #ebe5e5;
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+    
+    .input-group {
+      margin-bottom: 15px;
+    }
+    
+    label {
+      display: block;
+      font-size: 14px;
+      color: #c10c0c; /* Soft white for labels */
+      margin-bottom: 5px;
+    }
+    
+    input {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #444444; /* Subtle border */
+      border-radius: 5px;
+      font-size: 14px;
+      background-color: #2e2e2e; /* Dark input background */
+      color: #ffffff; /* White text */
+    }
+    
+    input::placeholder {
+      color: #888888; /* Subtle placeholder text */
+    }
+    
+    button {
+      background-color: #4CAF50; /* Green button */
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+    
+    button:hover {
+      background-color: #45a049; /* Slightly lighter green on hover */
+    }
+    
+    .result {
+      font-size: 16px;
+      color: #ffffff; /* White text for results */
+      margin-top: 20px;
+    }
+    
+    .hidden {
+      display: none;
+    }

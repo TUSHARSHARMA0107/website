@@ -1,0 +1,123 @@
+/* General Styling */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f9;
+  color: #fdf9f9;
+    /*background*/
+    background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url(../images/IMG-20250111-WA0001.jpg);
+    background-size: cover;
+    background-position:center ;
+    height: 10000%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+
+header {
+  text-align: center;
+  padding: 20px;
+  background: linear-gradient(to right, #007BFF, #0056b3);
+  color: rgb(220, 218, 218);
+}
+
+header h1 {
+  font-size: 2.5em;
+  margin: 0;
+}
+
+header p {
+  font-size: 1.2em;
+}
+
+/* Service Section */
+.services {
+  padding: 20px;
+  text-align: center;
+}
+
+.service-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.service-card {
+  background:transaprent;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  width: 300px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transform: scale(1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.service-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.service-card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.service-card h2 {
+  font-size: 1.5em;
+  margin: 10px 0;
+}
+
+.service-card p {
+  font-size: 1em;
+  color: #d4d2d2;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background: #007BFF;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 1em;
+  transition:  0.3s;
+}
+
+.btn:hover {
+  background: #0056b3;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .service-container {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 10px;
+  background: #333;
+  color: white;
+}

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive BMI Calculator</title>
+  <link rel="stylesheet" href="../css/bmi.css">
+</head>
+<body>
+  <div class="container">
+    <h1>BMI Calculator</h1>
+    <p>Enter your weight and height to calculate your BMI and get a personalized workout plan!</p>
+    <form id="bmiForm">
+      <input type="number" id="weight" placeholder="Weight in kg" required>
+      <input type="number" id="height" placeholder="Height in cm" required>
+      <button type="submit">Calculate BMI</button>
+    </form>
+    <p id="result"></p>
+    <div id="suggestion"></div>
+  </div>
+  <script src="../js/bmi.js"></script>
+</body>
+</html>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>weight gain category</title>
+    <link rel="stylesheet" href="../css/weight category.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <h1>weightgain</h1>
+            <ul>
+                <li><a href="#exercise">🏋 Exercise</a></li>
+                <li><a href="#yoga">🧘 Yoga</a></li>
+                <li><a href="#diet">🍽 Diet</a></li>
+            </ul>
+        </nav>
+        <div class="header-content">
+            <h2>weight gain Management</h2>
+            <p>Click on any exercise or yoga pose to watch the guide!</p>
+        </div>
+    </header>
+
+    <section id="exercise" class="section">
+        <h2>Exercise Plan</h2>
+        <div class="list">
+            <button onclick="playVideo('warmup.mp4')">🔹 Warm-up
+                  <p>10 minutes of walking or stretching to get started.</p>
+             </button>
+            <button onclick="playVideo('cardio.mp4')">🔹 Cardio
+                  <p>Short sessions (15-20 mins) of cycling or jogging to maintain cardiovascular health.</p>
+            </button>
+            <button onclick="playVideo('strength.mp4')">🔹 Strength Training(3-4 week)
+                  <p>Focus: Building muscle mass and improving strength.
+                      <br> <h>Strength Training (3-4 times a week):</h>
+
+                        <h4><br>Weightlifting:Focus on progressive overload to increase strength.</h4> 
+                     <br>  Bench press
+                     <br> Squats
+                     <br> Deadlifts.
+                    
+                        
+                        
+                       <br> <h4>Bodyweight Exercises:</h4>
+                        
+                        <br>Push-ups
+                        <br>Pull-ups 
+                        <br>Dips to build muscle.
+                         </p>
+             </button>
+            <button onclick="playVideo('cooldown.mp4')">🔹 Cool-down
+                  <p>Dynamic stretches before and static stretches after workouts to improve mobility.</p>
+            </button>
+        </div>
+        <div class="video-container">
+            <video id="exercise-video" controls>
+                <source src="warmup.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </section>
+
+    <section id="yoga" class="section">
+        <h2>Yoga Plan</h2>
+        <div class="list">
+            <button onclick="playVideo('mountain_pose.mp4')">🔸Cobra Pose (Bhujangasana)
+                  <p>Strengthens the back and improves posture.
+                  </p>
+             </button>
+            <button onclick="playVideo('child_pose.mp4')">🔸 Plank Pose (Phalakasana)
+                  <p> Builds core strength.</p>
+             </button>
+            <button onclick="playVideo('warrior_pose.mp4')">🔸 Downward Dog (Adho Mukha Svanasana): 
+                  <p>Stretches and tones the body.</p>
+            </button>
+            <button onclick="playVideo('bridge_pose.mp4')">🔸Butterfly Pose (Baddha Konasana)
+                  <p>Stretches inner thighs and hips.</p>
+            </button>
+        </div>
+        <div class="video-container">
+            <video id="yoga-video" controls>
+                <source src="mountain_pose.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </section>
+
+    <section id="diet" class="section">
+        <h2>Diet Plan</h2>
+        <p>Select your dietary preference:</p>
+        <div class="tabs">
+            <button class="tablink active" onclick="openTab(event, 'Veg')">🌱 Vegetarian</button>
+            <button class="tablink" onclick="openTab(event, 'NonVeg')">🍗 Non-Vegetarian</button>
+        </div>
+        <div id="Veg" class="tabcontent">
+            <ul>
+                <li>🥗 Breakfast: Peanut butter on whole-grain toast with a banana.
+                       <br>A protein smoothie with oats, almond milk, and whey protein.
+                    </li>
+                <li>🥗 Lunch: Paneer curry with brown rice and a bowl of dal.
+                       <br>A small avocado salad.
+                    </li>
+                <li>🥗 Snack: A protein bar or a cup of yogurt with nuts.
+                </li>
+                <li>🥗 Dinner:Whole-grain pasta with sautéed vegetables and tofu.
+                </li>
+            </ul>
+        </div>
+        <div id="NonVeg" class="tabcontent" style="display: none;">
+            <ul>
+                <li>🍳 Breakfast:
+                    Omelette (3 eggs) with whole-grain toast and avocado.
+                    A smoothie with whole milk, banana, and whey protein.
+                     </li>
+                <li>🍗 Lunch:Grilled chicken or fish with mashed sweet potatoes and sautéed greens.
+                </li>
+                <li>🍗 Snack:A protein shake with mixed nuts or a granola bar.
+                </li>
+                <li>🍗 Dinner:Lean beef, baked salmon, or roasted chicken with quinoa and steamed vegetables.
+                  </li>
+            </ul>
+        </div>
+        <video controls>
+            <source src="yoga-guide.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+    </section>
+
+    <footer>
+      <div class="footer-container">
+            <link rel="stylesheet" href="../css/footer.css">
+            <a href="#prev-page" class="">Previous Page</a>
+            <a href="#prev-page" class="footer-button">Shop  with Us</a>
+            <a href="#top" class="footer-button">Top of Page</a>
+            <a href="#next-page" class="footer-button">Next Page</a>
+            <div class="social-icons">
+                <a href="https://twitter.com" target="_blank">
+                    <img src="../images/footer image/image/twitter.jpg" alt="Twitter">
+                </a>
+                <a href="https://mail.google.com" target="_blank">
+                    <img src="../images/footer image/image/gmail.png" alt="Gmail">
+                </a>
+                <a href="https://instagram.com" target="_blank">
+                    <img src="../images/footer image/image/instagram.png" alt="Instagram">
+                </a>
+                <a href="https://facebook.com" target="_blank">
+                    <img src="../images/footer image/image/facebook.jpg" alt="Facebook">
+                </a>
+            </div>
+        </div>
+        
+    </footer>
+
+    <script src="../js/weight category.js"></script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Split Screen</title>
+    <link rel="stylesheet" href="../css/login.css">
+</head>
+<body>
+
+<div class="container">
+
+    <div class="left">
+        <div class="overlay"></div>
+        <div class="text">
+            <h1>Welcome Back</h1>
+            <p>Manage your fitness journey with us</p>
+        </div>
+    </div>
+
+    <div class="right">
+
+        <!-- -------- GUIDE SECTION -------- -->
+        <div class="guide-box" id="guideSection">
+            <h2>Before You Login</h2>
+            <ul>
+                <li>✔ Track and manage fitness progress</li>
+                <li>✔ View our personalized workout plans</li>
+                <li>✔ Monitor your health metrics</li>
+                
+            </ul>
+
+            <button class="btn" onclick="showLogin()">Proceed to Login</button>
+        </div>
+
+        <!-- -------- LOGIN FORM -------- -->
+        <form class="form-box" id="loginForm" style="display:none;">
+            <h2>Login</h2>
+
+            <div class="input-group">
+                <label>Email</label>
+                <input type="email" required>
+            </div>
+
+            <div class="input-group">
+                <label>Password</label>
+                <input type="password" required>
+            </div>
+
+            <button class="btn" onclick="goHome(event)">Login</button>
+
+            <p class="bottom-text">
+                New here? <a href="#">Create an account</a>
+            </p>
+        </form>
+
+    </div>
+
+</div>
+
+<script>
+    // GUIDE → LOGIN FORM
+    function showLogin() {
+        document.getElementById("guideSection").style.display = "none";
+        document.getElementById("loginForm").style.display = "block";
+    }
+
+    // LOGIN → HOME PAGE
+    function goHome(e) {
+        e.preventDefault();
+        window.location.href = "./mainpage.html"; 
+    }
+</script>
+
+</body>
+</html>
+

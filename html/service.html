@@ -3,77 +3,95 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>service</title>
+  <title>Fit N Fine - Services</title>
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css">
+
+  <!-- Component CSS -->
+  <link rel="stylesheet" href="../navbar/navbar.css">
+  <link rel="stylesheet" href="../footer/footer.css">
+
+  <!-- Page CSS -->
   <link rel="stylesheet" href="../css/service.css">
-  
-  <link rel="stylesheet" href="c:\Users\tusha\Desktop\website\navbar\navbar.css"> <!-- Link to css navbar -->
-  <script src="c:\Users\tusha\Desktop\website\navbar\navbar.js" defer></script>   <!-- Link to your navbar -->
 </head>
+
 <body>
-  <section class="services">
-    <h1>Our Services</h1>
-    <div class="service-container">
-      <div class="service-card">
-        <img src="weight-loss.jpg" alt="Weight Loss">
-        <h2> Weight Loss Program</h2>
-        <p>Get the best weight loss program designed considering all factors</p>
-        <a href="./" class="btn">View</a>
-      </div>
-      <div class="service-card">
-        <img src="weight-gain.jpg" alt="Weight Gain">
-        <h2>Weight Gain Program</h2>
-        <p>Plan tohelp you achieve your weight gain goals.</p>
-        <a href="./overweight category.html" class="btn">View</a>
-      </div>
-      <div class="service-card">
-        <img src="healthy-living.jpg" alt="Healthy Living">
-        <h2>Healthy Living</h2>
-        <p>Explore tips and plan for a balanced, healthy lifestyle.</p>
-        <a href="./normal weight category.html" class="btn">Learn More</a>
-      </div>
-      <div class="service-card">
-        <img src="personal-coach.jpg" alt="Personal Coach">
-        <h2>Hire a Personal Coach</h2>
-        <p>Get personalized guidance to achieve your fitness goals.</p>
-        <a href="#" class="btn">Hire Now</a>
-      </div>
-      <div class="service-card">
-        <img src="fitness-program.jpg" alt="Shopping">
-        <h2>Shop At Us</h2>
-        <p>View variety of product at us</p>
-        <a href="#" class="btn">Shop Now</a>
-      </div>
-      <div class="service-card">
-        <img src="fitness-program.jpg" alt="Fitness Program">
-        <h2>Join Fitness Programs</h2>
-        <p>Join our expertly designed programs for all fitness levels.</p>
-        <a href="#" class="btn">Join Now</a>
-      </div>
+
+<!-- NAVBAR (Auto Inject) -->
+<div id="navbar"></div>
+
+
+<!-- HERO SECTION -->
+<section class="service-hero">
+  <h1>Our Premium Fitness Services</h1>
+  <p>Transform your lifestyle with personalized programs designed for you.</p>
+</section>
+
+
+<!-- SERVICE CARDS -->
+<section class="services">
+  <h2 class="section-title">Choose Your Journey</h2>
+
+  <div class="service-container">
+
+    <!-- Weight Loss -->
+    <div class="service-card">
+      <img src="../images/services/weight-loss.jpg" alt="Weight Loss">
+      <h3>Weight Loss Program</h3>
+      <p>Scientifically designed routines & diets to burn fat faster.</p>
+      <a href="#" class="btn">View Program</a>
     </div>
-  </section>
+
+    <!-- Weight Gain -->
+    <div class="service-card">
+      <img src="../images/services/weight-gain.jpg" alt="Weight Gain">
+      <h3>Weight Gain Program</h3>
+      <p>Healthy bulking plans to build quality muscle mass.</p>
+      <a href="./overweight category.html" class="btn">View Plan</a>
+    </div>
+
+    <!-- Healthy Living -->
+    <div class="service-card">
+      <img src="../images/services/healthy-living.jpg" alt="Healthy Living">
+      <h3>Healthy Living</h3>
+      <p>Balanced routines for long-term sustainable lifestyle.</p>
+      <a href="./normal weight category.html" class="btn">Learn More</a>
+    </div>
+
+    <!-- Personal Coach -->
+    <div class="service-card">
+      <img src="../images/services/personal-coach.jpg" alt="Coach">
+      <h3>Hire a Personal Coach</h3>
+      <p>Get 1-on-1 coaching with customized fitness guidance.</p>
+      <a href="#" class="btn">Hire Now</a>
+    </div>
+
+    <!-- Shopping -->
+    <div class="service-card">
+      <img src="../images/services/shop.jpg" alt="Shop">
+      <h3>Shop Fitness Products</h3>
+      <p>Buy premium equipment, supplements & fitness accessories.</p>
+      <a href="./shopping.html" class="btn">Shop Now</a>
+    </div>
+
+    <!-- Fitness Programs -->
+    <div class="service-card">
+      <img src="../images/services/fitness-program.jpg" alt="Fitness Programs">
+      <h3>Join Fitness Programs</h3>
+      <p>Structured programs for beginners to advanced athletes.</p>
+      <a href="#" class="btn">Join Program</a>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- FOOTER (Auto Inject) -->
+<div id="footer"></div>
+
+<script src="../navbar/navbar.js"></script>
+<script src="../footer/footer.js"></script>
+
 </body>
-<footer>
-  <div class="footer-container">
-        <link rel="stylesheet" href="../css/footer.css">
-        <a href="../html/home.html" class="footer-button">Previous Page</a>
-        <a href="../html/shopping.html" class="footer-button">Shop  with Us</a>
-        <a href="#top" class="footer-button">Top of Page</a>
-        
-        <div class="social-icons">
-            <a href="https://twitter.com" target="_blank">
-                <img src="../images/footer image/image/twitter.jpg" alt="Twitter">
-            </a>
-            <a href="https://mail.google.com" target="_blank">
-                <img src="../images/footer image/image/gmail.png" alt="Gmail">
-            </a>
-            <a href="https://instagram.com" target="_blank">
-                <img src="../images/footer image/image/instagram.png" alt="Instagram">
-            </a>
-            <a href="https://facebook.com" target="_blank">
-                <img src="../images/footer image/image/facebook.jpg" alt="Facebook">
-            </a>
-        </div>
-    </div>
-    
-</footer>
 </html>

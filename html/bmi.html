@@ -3,21 +3,60 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Interactive BMI Calculator</title>
-  <link rel="stylesheet" href="../css/bmi.css">
+  <title>BMI PRO Calculator</title>
+
+  <link rel="stylesheet" href="../css/bmi-pro.css">
 </head>
+
 <body>
-  <div class="container">
-    <h1>BMI Calculator</h1>
-    <p>Enter your weight and height to calculate your BMI and get a personalized workout plan!</p>
-    <form id="bmiForm">
-      <input type="number" id="weight" placeholder="Weight in kg" required>
-      <input type="number" id="height" placeholder="Height in cm" required>
-      <button type="submit">Calculate BMI</button>
-    </form>
-    <p id="result"></p>
-    <div id="suggestion"></div>
-  </div>
-  <script src="../js/bmi.js"></script>
+
+<div class="bmi-wrapper">
+
+    <div class="bmi-card">
+
+        <h1 class="title">BMI  Calculator</h1>
+        <p class="subtitle">Get AI-powered workout & diet suggestions instantly.</p>
+
+        <div class="inputs">
+            <input type="number" id="weight" placeholder="Weight (kg)">
+            <input type="number" id="height" placeholder="Height (cm)">
+        </div>
+
+        <button class="calc-btn" onclick="runBMI()">Calculate BMI</button>
+
+        <!-- Gauge Section -->
+        <div class="gauge hidden">
+            <div class="gauge-circle">
+                <div class="gauge-fill" id="gaugeFill"></div>
+                <div class="gauge-cover" id="gaugeValue">0</div>
+            </div>
+        </div>
+
+        <!-- Result Section -->
+        <div id="result-box" class="result-box hidden">
+            <h2 id="bmi-text"></h2>
+            <p id="bmi-status"></p>
+
+            <h3 class="sub">Recommended Workout</h3>
+            <p id="workout-plan"></p>
+
+            <h3 class="sub">Recommended Diet</h3>
+            <p id="diet-plan"></p>
+
+            <button class="save-btn" onclick="saveHistory()">Save to History</button>
+        </div>
+
+        <!-- History Section -->
+        <div class="history-box">
+            <h3>Past BMI Records</h3>
+            <ul id="history-list"></ul>
+        </div>
+
+    </div>
+
+</div>
+
+<script src="../js/bmi-pro"></script>
+
 </body>
 </html>

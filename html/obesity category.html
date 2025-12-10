@@ -1,131 +1,261 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>obesity</title>
-    <link rel="stylesheet" href="../css/weight category.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Obesity Management — Fit N Fine</title>
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css">
+
+  <!-- Component CSS -->
+  <link rel="stylesheet" href="../navbar/navbar.css">
+  <link rel="stylesheet" href="../footer/footer.css">
+
+  <!-- Page CSS -->
+  <link rel="stylesheet" href="../css/weight-category.css">
 </head>
 <body>
-    <header>
-        <nav class="navbar">
-            <h1>Interactive Health Plan</h1>
-            <ul>
-                <li><a href="#exercise">🏋 Exercise</a></li>
-                <li><a href="#yoga">🧘 Yoga</a></li>
-                <li><a href="#diet">🍽 Diet</a></li>
-            </ul>
-        </nav>
-        <div class="header-content">
-            <h2>Obesity Management</h2>
-            <p>Click on any exercise or yoga pose to watch the guide!</p>
-        </div>
-    </header>
 
-    <section id="exercise" class="section">
+  <!-- NAVBAR -->
+  <div id="navbar"></div>
+
+  <!-- HERO -->
+  <header class="wg-hero">
+    <div class="wg-hero-inner">
+      <div class="wg-hero-text">
+        <h1>Obesity Management</h1>
+        <p>Safe, step-by-step plans for sustainable weight loss — exercise, yoga and diet guidance.</p>
+        <div class="hero-cta">
+          <button id="openBooking" class="hero-btn">Book a Coach</button>
+          <a href="../html/progress.html" class="hero-btn ghost">Open Tracker</a>
+        </div>
+      </div>
+      <img src="../images/services/overweight-hero.jpg" alt="Obesity management" class="wg-hero-img">
+    </div>
+  </header>
+
+  <!-- NAV -->
+  <nav class="wg-nav">
+    <a href="#exercise" class="active">🏋 Exercise</a>
+    <a href="#yoga">🧘 Yoga</a>
+    <a href="#diet">🍽 Diet</a>
+  </nav>
+
+  <main class="wg-main">
+
+    <!-- EXERCISE -->
+    <section id="exercise" class="wg-section">
+      <div class="wg-left">
         <h2>Exercise Plan</h2>
-        <div class="list">
-            <button onclick="playVideo('warmup.mp4')">🔹 Warm-up
-                  <p>10 minutes of walking or stretching to get started.</p>
-             </button>
-            <button onclick="playVideo('cardio.mp4')">🔹 Cardio
-                  <p>20 minutes of cycling or brisk walking to burn calories.</p>
-            </button>
-            <button onclick="playVideo('strength.mp4')">🔹 Strength Training
-                  <p>15 minutes of lightweights or bodyweight exercises.</p>
-             </button>
-            <button onclick="playVideo('cooldown.mp4')">🔹 Cool-down
-                  <p>5 minutes of stretching to relax and recover.</p>
-            </button>
-        </div>
-        <div class="video-container">
-            <video id="exercise-video" controls>
-                <source src="warmup.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-        </div>
-    </section>
+        <p class="muted">Low-impact cardio, mobility and progressive strength. Click Watch to load lessons and mark items done to track progress.</p>
 
-    <section id="yoga" class="section">
-        <h2>Yoga Plan</h2>
-        <div class="list">
-            <button onclick="playVideo('mountain_pose.mp4')">🔸 Mountain Pose
-                  <p>A grounding pose to improve posture and stability.</p>
-             </button>
-            <button onclick="playVideo('child_pose.mp4')">🔸 Child's Pose
-                  <p>A resting pose to relax and stretch your back.</p>
-             </button>
-            <button onclick="playVideo('warrior_pose.mp4')">🔸 Warrior Pose
-                  <p>A strengthening pose to build stamina and balance.</p>
-            </button>
-            <button onclick="playVideo('bridge_pose.mp4')">🔸 Bridge Pose
-                  <p>A pose to strengthen your core and lower back.</p>
-            </button>
-        </div>
-        <div class="video-container">
-            <video id="yoga-video" controls>
-                <source src="mountain_pose.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-        </div>
-    </section>
-
-    <section id="diet" class="section">
-        <h2>Diet Plan</h2>
-        <p>Select your dietary preference:</p>
-        <div class="tabs">
-            <button class="tablink active" onclick="openTab(event, 'Veg')">🌱 Vegetarian</button>
-            <button class="tablink" onclick="openTab(event, 'NonVeg')">🍗 Non-Vegetarian</button>
-        </div>
-        <div id="Veg" class="tabcontent">
-            <ul>
-                <li>🥗 Breakfast: Oats with almond milk and fruits</li>
-                <li>🥗 Lunch: Quinoa salad with mixed vegetables</li>
-                <li>🥗 Snack: Roasted chickpeas or fruit smoothie</li>
-                <li>🥗 Dinner: Lentil soup with steamed vegetables</li>
-            </ul>
-        </div>
-        <div id="NonVeg" class="tabcontent" style="display: none;">
-            <ul>
-                <li>🍳 Breakfast: Boiled eggs with whole-grain toast</li>
-                <li>🍗 Lunch: Grilled chicken with brown rice and vegetables</li>
-                <li>🍗 Snack: Greek yogurt with nuts</li>
-                <li>🍗 Dinner: Baked fish with a side of salad</li>
-            </ul>
-        </div>
-        <video controls>
-            <source src="yoga-guide.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-
-    </section>
-
-    <footer>
-      <div class="footer-container">
-            <link rel="stylesheet" href="../css/footer.css">
-            <a href="#prev-page" class="footer-button">Previous Page</a>
-            <a href="#prev-page" class="footer-button">Shop  with Us</a>
-            <a href="#top" class="footer-button">Top of Page</a>
-            <a href="#next-page" class="footer-button">Next Page</a>
-            <div class="social-icons">
-                <a href="https://twitter.com" target="_blank">
-                    <img src="../images/footer image/image/twitter.jpg" alt="Twitter">
-                </a>
-                <a href="https://mail.google.com" target="_blank">
-                    <img src="../images/footer image/image/gmail.png" alt="Gmail">
-                </a>
-                <a href="https://instagram.com" target="_blank">
-                    <img src="../images/footer image/image/instagram.png" alt="Instagram">
-                </a>
-                <a href="https://facebook.com" target="_blank">
-                    <img src="../images/footer image/image/facebook.jpg" alt="Facebook">
-                </a>
+        <div class="wg-list" id="exerciseList">
+          <div class="wg-item" data-video="https://www.youtube.com/watch?v=VbfpW0pbvaU" data-key="ob-warmup">
+            <div class="wg-item-head">
+              <span class="wg-item-title">🔹 Warm-up — 8–10 min</span>
+              <div class="wg-item-actions">
+                <label class="chk"><input type="checkbox" class="check-item" data-key="ob-warmup"/> Done</label>
+                <button class="wg-expand" aria-expanded="false">Details</button>
+              </div>
             </div>
-        </div>
-        
-    </footer>
+            <div class="wg-item-body">
+              <p>Gentle brisk walking or marching in place to raise heart rate safely.</p>
+              <ul>
+                <li>5–8 minutes walking</li>
+                <li>Dynamic mobility exercises</li>
+              </ul>
+              <button class="wg-play" data-src="https://www.youtube.com/watch?v=VbfpW0pbvaU">Watch (YouTube)</button>
+            </div>
+          </div>
 
-    <script src="../js/weight category.js"></script>
+          <div class="wg-item" data-video="https://www.youtube.com/watch?v=3GwjfUFyY6M" data-key="ob-cardio">
+            <div class="wg-item-head">
+              <span class="wg-item-title">🔹 Low-Impact Cardio — 20–30 min</span>
+              <div class="wg-item-actions">
+                <label class="chk"><input type="checkbox" class="check-item" data-key="ob-cardio"/> Done</label>
+                <button class="wg-expand" aria-expanded="false">Details</button>
+              </div>
+            </div>
+            <div class="wg-item-body">
+              <p>Walking, cycling, or elliptical work well — aim for moderate intensity.</p>
+              <ul>
+                <li>Intervals: 2 min moderate, 1 min easy</li>
+                <li>Start with 20 minutes, progress gradually</li>
+              </ul>
+              <button class="wg-play" data-src="https://www.youtube.com/watch?v=3GwjfUFyY6M">Watch (YouTube)</button>
+            </div>
+          </div>
+
+          <div class="wg-item" data-video="https://www.youtube.com/watch?v=Uj1ykZWtPYI" data-key="ob-strength">
+            <div class="wg-item-head">
+              <span class="wg-item-title">🔹 Strength (Bodyweight/light) — 2–3x / week</span>
+              <div class="wg-item-actions">
+                <label class="chk"><input type="checkbox" class="check-item" data-key="ob-strength"/> Done</label>
+                <button class="wg-expand" aria-expanded="false">Details</button>
+              </div>
+            </div>
+            <div class="wg-item-body">
+              <p>Supported squats, wall push-ups, step-ups — 2–3 sets of 8–12 reps.</p>
+              <button class="wg-play" data-src="https://www.youtube.com/watch?v=Uj1ykZWtPYI">Watch (YouTube)</button>
+            </div>
+          </div>
+
+          <div class="wg-item" data-video="https://www.youtube.com/watch?v=oHg5SJYRHA0" data-key="ob-cooldown">
+            <div class="wg-item-head">
+              <span class="wg-item-title">🔹 Cool-down & Stretch — 5–8 min</span>
+              <div class="wg-item-actions">
+                <label class="chk"><input type="checkbox" class="check-item" data-key="ob-cooldown"/> Done</label>
+                <button class="wg-expand" aria-expanded="false">Details</button>
+              </div>
+            </div>
+            <div class="wg-item-body">
+              <p>Slow walking + gentle static stretches to aid recovery.</p>
+              <button class="wg-play" data-src="https://www.youtube.com/watch?v=oHg5SJYRHA0">Watch (YouTube)</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <aside class="wg-right">
+        <div class="video-frame" id="videoFrame">
+          <div class="video-placeholder center">Select a lesson and press Watch</div>
+        </div>
+
+        <div class="wg-cards">
+          <div class="card">
+            <h4>Beginner Tip</h4>
+            <p>Start small, aim for consistency. Focus on daily movement, progress slowly and safely.</p>
+          </div>
+
+          <div class="card">
+            <h4>Medical Note</h4>
+            <p>If you have chronic conditions, consult your doctor before starting a program.</p>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <!-- YOGA -->
+    <section id="yoga" class="wg-section">
+      <div class="wg-left">
+        <h2>Yoga & Mobility</h2>
+        <p class="muted">Gentle yoga to improve breathing, posture and flexibility.</p>
+
+        <div class="wg-list" id="yogaList">
+          <div class="wg-item" data-video="https://www.youtube.com/watch?v=VbfpW0pbvaU" data-key="ob-tree">
+            <div class="wg-item-head">
+              <span class="wg-item-title">🔸 Mountain Pose / Standing Flow</span>
+              <div class="wg-item-actions">
+                <label class="chk"><input type="checkbox" class="check-item" data-key="ob-tree"/> Done</label>
+                <button class="wg-expand" aria-expanded="false">Details</button>
+              </div>
+            </div>
+            <div class="wg-item-body">
+              <p>Simple standing flows to mobilize the spine and hips.</p>
+              <button class="wg-play" data-src="https://www.youtube.com/watch?v=VbfpW0pbvaU">Watch (YouTube)</button>
+            </div>
+          </div>
+
+          <div class="wg-item" data-video="https://www.youtube.com/watch?v=9bZkp7q19f0" data-key="ob-child">
+            <div class="wg-item-head">
+              <span class="wg-item-title">🔸 Child's Pose / Restorative</span>
+              <div class="wg-item-actions">
+                <label class="chk"><input type="checkbox" class="check-item" data-key="ob-child"/> Done</label>
+                <button class="wg-expand" aria-expanded="false">Details</button>
+              </div>
+            </div>
+            <div class="wg-item-body">
+              <p>Restorative posture to ease the lower back and calm the nervous system.</p>
+              <button class="wg-play" data-src="https://www.youtube.com/watch?v=9bZkp7q19f0">Watch (YouTube)</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <aside class="wg-right">
+        <div class="video-frame" id="yogaFrame">
+          <div class="video-placeholder center">Select a yoga lesson and press Watch</div>
+        </div>
+
+        <div class="wg-cards">
+          <div class="card">
+            <h4>Breathing</h4>
+            <p>Try diaphragmatic breathing 5 minutes daily to support stress management.</p>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <!-- DIET -->
+    <section id="diet" class="wg-section">
+      <div class="wg-left">
+        <h2>Diet Plan</h2>
+        <p class="muted">Balanced low-calorie, nutrient-dense meals. Choose vegetarian or non-veg plan.</p>
+
+        <div class="tabs" role="tablist">
+          <button class="tablink active" data-tab="Veg">🌱 Vegetarian</button>
+          <button class="tablink" data-tab="NonVeg">🍗 Non-Vegetarian</button>
+        </div>
+
+        <div class="tabcontent active" id="Veg">
+          <ul class="diet-list">
+            <li><strong>Breakfast:</strong> Oats with fruits, chia & low-fat milk.</li>
+            <li><strong>Lunch:</strong> Quinoa salad with mixed veggies and legumes.</li>
+            <li><strong>Snack:</strong> Roasted chickpeas or fruit smoothie.</li>
+            <li><strong>Dinner:</strong> Lentil soup and steamed vegetables.</li>
+          </ul>
+        </div>
+
+        <div class="tabcontent" id="NonVeg" aria-hidden="true">
+          <ul class="diet-list">
+            <li><strong>Breakfast:</strong> Boiled eggs and whole-grain toast.</li>
+            <li><strong>Lunch:</strong> Grilled fish/chicken with brown rice and salad.</li>
+            <li><strong>Snack:</strong> Greek yogurt with nuts.</li>
+            <li><strong>Dinner:</strong> Baked fish or lean protein with veggies.</li>
+          </ul>
+        </div>
+      </div>
+
+      <aside class="wg-right">
+        <div class="card">
+          <h4>Safety First</h4>
+          <p>Discuss with your doctor before starting if you have diabetes, heart disease, or mobility issues.</p>
+        </div>
+
+        <div class="card">
+          <h4>Track Progress</h4>
+          <p>Use the <a href="../html/bmi.html">BMI tool</a> and <a href="../html/progress.html">Progress Tracker</a>.</p>
+        </div>
+      </aside>
+    </section>
+
+  </main>
+
+  <!-- Booking Modal -->
+  <div id="bookingModal" class="modal" aria-hidden="true">
+    <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="bookingTitle">
+      <button class="modal-close" id="closeBooking" aria-label="Close">&times;</button>
+      <h3 id="bookingTitle">Request a Personal Coach</h3>
+      <form id="bookingForm">
+        <div class="form-row"><label>Name</label><input type="text" id="bk_name" required></div>
+        <div class="form-row"><label>Email</label><input type="email" id="bk_email" required></div>
+        <div class="form-row"><label>Phone</label><input type="tel" id="bk_phone"></div>
+        <div class="form-row"><label>Preferred Date</label><input type="date" id="bk_date"></div>
+        <div class="form-row"><label>Notes</label><textarea id="bk_notes"></textarea></div>
+        <div class="form-row center"><button class="btn-primary" type="submit">Request Booking</button></div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div id="footer"></div>
+
+  <!-- Scripts -->
+  <script src="../navbar/navbar.js" defer></script>
+  <script src="../footer/footer.js" defer></script>
+  <script src="../js/weight-category.js" defer></script>
 </body>
 </html>

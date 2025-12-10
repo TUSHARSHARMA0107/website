@@ -1,0 +1,16 @@
+.footer {
+    background: white;
+    padding: 30px;
+    text-align: center;
+    color: #222;
+    border-top: 1px solid #ddd;
+}
+
+.footer .socials img {
+    height: 30px;
+    margin: 0 10px;
+    transition: 0.3s;
+}
+.footer .socials img:hover {
+    transform: scale(1.1);
+}

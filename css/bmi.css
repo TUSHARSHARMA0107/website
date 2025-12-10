@@ -1,77 +1,145 @@
 body {
-      font-family: 'Arial', sans-serif;
-      background-color: transparent; /* Dark background */
-      margin: 0;
-      padding: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      color: #fbf8f8; /* White text for contrast */
-    }
-    
-    .bmi-container {
-      background: #1e1e1e; /* Dark card background */
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-      padding: 20px;
-      text-align: center;
-      width: 90%;
-      max-width: 400px;
-    }
-    
-    h1 {
-      color: #ebe5e5;
-      font-size: 24px;
-      margin-bottom: 20px;
-    }
-    
-    .input-group {
-      margin-bottom: 15px;
-    }
-    
-    label {
-      display: block;
-      font-size: 14px;
-      color: #c10c0c; /* Soft white for labels */
-      margin-bottom: 5px;
-    }
-    
-    input {
-      width: 100%;
-      padding: 10px;
-      border: 1px solid #444444; /* Subtle border */
-      border-radius: 5px;
-      font-size: 14px;
-      background-color: #2e2e2e; /* Dark input background */
-      color: #ffffff; /* White text */
-    }
-    
-    input::placeholder {
-      color: #888888; /* Subtle placeholder text */
-    }
-    
-    button {
-      background-color: #4CAF50; /* Green button */
-      color: white;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 5px;
-      font-size: 16px;
-      cursor: pointer;
-      margin-top: 10px;
-    }
-    
-    button:hover {
-      background-color: #45a049; /* Slightly lighter green on hover */
-    }
-    
-    .result {
-      font-size: 16px;
-      color: #ffffff; /* White text for results */
-      margin-top: 20px;
-    }
-    
-    .hidden {
-      display: none;
-    }
+    margin: 0;
+    background: #f4f4f4;
+    font-family: "Poppins", sans-serif;
+}
+
+.bmi-wrapper {
+    height: auto;
+    display: flex;
+    justify-content: center;
+    padding: 50px 0;
+}
+
+.bmi-card {
+    width: 420px;
+    padding: 35px;
+    background: white;
+    border-radius: 22px;
+    box-shadow: 0 6px 25px rgba(0,0,0,0.12);
+    animation: fadeIn 0.5s ease;
+}
+
+.title {
+    text-align: center;
+    font-size: 28px;
+    margin: 0;
+}
+
+.subtitle {
+    text-align: center;
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 25px;
+}
+
+.inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+input {
+    padding: 12px;
+    border-radius: 12px;
+    border: 1px solid #ccc;
+    background: #fafafa;
+    transition: .3s;
+}
+
+input:focus {
+    border-color: #ff8a00;
+    box-shadow: 0 0 5px rgba(255,138,0,0.3);
+}
+
+.calc-btn {
+    margin-top: 15px;
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(135deg, #ff8a00, #e52e71);
+    color: white;
+    border-radius: 14px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.calc-btn:hover {
+    transform: scale(1.05);
+}
+
+.hidden {
+    display: none;
+}
+
+/* GAUGE */
+.gauge {
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+}
+
+.gauge-circle {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    position: relative;
+    background: #eee;
+    overflow: hidden;
+}
+
+.gauge-fill {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: conic-gradient(#e52e71 0deg, #ff8a00 0deg);
+    transition: 1s ease-in-out;
+}
+
+.gauge-cover {
+    position: absolute;
+    width: 130px;
+    height: 130px;
+    background: white;
+    border-radius: 50%;
+    top: 25px;
+    left: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.result-box {
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 12px;
+    background: #fafafa;
+    border: 1px solid #ddd;
+}
+
+.sub {
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.save-btn {
+    width: 100%;
+    padding: 10px;
+    margin-top: 12px;
+    border: none;
+    border-radius: 10px;
+    background: #222;
+    color: white;
+    cursor: pointer;
+}
+
+.history-box {
+    margin-top: 25px;
+}
+
+.history-box ul {
+    padding-left: 15px;
+}

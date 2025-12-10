@@ -1,159 +1,248 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>weight gain category</title>
-    <link rel="stylesheet" href="../css/weight category.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Weight Gain — Fit N Fine</title>
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css">
+
+  <!-- Component CSS -->
+  <link rel="stylesheet" href="../navbar/navbar.css">
+  <link rel="stylesheet" href="../footer/footer.css">
+
+  <!-- Page CSS -->
+  <link rel="stylesheet" href="../css/weight-category.css">
 </head>
 <body>
-    <header>
-        <nav class="navbar">
-            <h1>weightgain</h1>
-            <ul>
-                <li><a href="#exercise">🏋 Exercise</a></li>
-                <li><a href="#yoga">🧘 Yoga</a></li>
-                <li><a href="#diet">🍽 Diet</a></li>
-            </ul>
-        </nav>
-        <div class="header-content">
-            <h2>weight gain Management</h2>
-            <p>Click on any exercise or yoga pose to watch the guide!</p>
-        </div>
-    </header>
 
-    <section id="exercise" class="section">
+  <!-- Navbar (auto-inject) -->
+  <div id="navbar"></div>
+
+  <!-- HERO -->
+  <header class="wg-hero">
+    <div class="wg-hero-inner">
+      <div class="wg-hero-text">
+        <h1>Weight Gain Management</h1>
+        <p>Healthy, structured plans to build muscle & quality mass — workouts, yoga and nutrition.</p>
+        <div class="hero-cta">
+          <button id="openBooking" class="hero-btn">Book a Coach</button>
+          <a href="../html/progress.html" class="hero-btn ghost">Open Tracker</a>
+        </div>
+      </div>
+      <img src="../images/services/weight-gain-hero.jpg" alt="Weight Gain" class="wg-hero-img">
+    </div>
+  </header>
+
+  <!-- NAV TABS -->
+  <nav class="wg-nav">
+    <a href="#exercise" class="active">🏋 Exercise</a>
+    <a href="#yoga">🧘 Yoga</a>
+    <a href="#diet">🍽 Diet</a>
+  </nav>
+
+  <main class="wg-main">
+
+    <!-- EXERCISE SECTION -->
+    <section id="exercise" class="wg-section">
+      <div class="wg-left">
         <h2>Exercise Plan</h2>
-        <div class="list">
-            <button onclick="playVideo('warmup.mp4')">🔹 Warm-up
-                  <p>10 minutes of walking or stretching to get started.</p>
-             </button>
-            <button onclick="playVideo('cardio.mp4')">🔹 Cardio
-                  <p>Short sessions (15-20 mins) of cycling or jogging to maintain cardiovascular health.</p>
-            </button>
-            <button onclick="playVideo('strength.mp4')">🔹 Strength Training(3-4 week)
-                  <p>Focus: Building muscle mass and improving strength.
-                      <br> <h>Strength Training (3-4 times a week):</h>
+        <p class="muted">Progressive strength + recovery. Click "Watch" to open the guided lesson and mark as done to track progress.</p>
 
-                        <h4><br>Weightlifting:Focus on progressive overload to increase strength.</h4> 
-                     <br>  Bench press
-                     <br> Squats
-                     <br> Deadlifts.
-                    
-                        
-                        
-                       <br> <h4>Bodyweight Exercises:</h4>
-                        
-                        <br>Push-ups
-                        <br>Pull-ups 
-                        <br>Dips to build muscle.
-                         </p>
-             </button>
-            <button onclick="playVideo('cooldown.mp4')">🔹 Cool-down
-                  <p>Dynamic stretches before and static stretches after workouts to improve mobility.</p>
-            </button>
-        </div>
-        <div class="video-container">
-            <video id="exercise-video" controls>
-                <source src="warmup.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-        </div>
-    </section>
-
-    <section id="yoga" class="section">
-        <h2>Yoga Plan</h2>
-        <div class="list">
-            <button onclick="playVideo('mountain_pose.mp4')">🔸Cobra Pose (Bhujangasana)
-                  <p>Strengthens the back and improves posture.
-                  </p>
-             </button>
-            <button onclick="playVideo('child_pose.mp4')">🔸 Plank Pose (Phalakasana)
-                  <p> Builds core strength.</p>
-             </button>
-            <button onclick="playVideo('warrior_pose.mp4')">🔸 Downward Dog (Adho Mukha Svanasana): 
-                  <p>Stretches and tones the body.</p>
-            </button>
-            <button onclick="playVideo('bridge_pose.mp4')">🔸Butterfly Pose (Baddha Konasana)
-                  <p>Stretches inner thighs and hips.</p>
-            </button>
-        </div>
-        <div class="video-container">
-            <video id="yoga-video" controls>
-                <source src="mountain_pose.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-        </div>
-    </section>
-
-    <section id="diet" class="section">
-        <h2>Diet Plan</h2>
-        <p>Select your dietary preference:</p>
-        <div class="tabs">
-            <button class="tablink active" onclick="openTab(event, 'Veg')">🌱 Vegetarian</button>
-            <button class="tablink" onclick="openTab(event, 'NonVeg')">🍗 Non-Vegetarian</button>
-        </div>
-        <div id="Veg" class="tabcontent">
-            <ul>
-                <li>🥗 Breakfast: Peanut butter on whole-grain toast with a banana.
-                       <br>A protein smoothie with oats, almond milk, and whey protein.
-                    </li>
-                <li>🥗 Lunch: Paneer curry with brown rice and a bowl of dal.
-                       <br>A small avocado salad.
-                    </li>
-                <li>🥗 Snack: A protein bar or a cup of yogurt with nuts.
-                </li>
-                <li>🥗 Dinner:Whole-grain pasta with sautéed vegetables and tofu.
-                </li>
-            </ul>
-        </div>
-        <div id="NonVeg" class="tabcontent" style="display: none;">
-            <ul>
-                <li>🍳 Breakfast:
-                    Omelette (3 eggs) with whole-grain toast and avocado.
-                    A smoothie with whole milk, banana, and whey protein.
-                     </li>
-                <li>🍗 Lunch:Grilled chicken or fish with mashed sweet potatoes and sautéed greens.
-                </li>
-                <li>🍗 Snack:A protein shake with mixed nuts or a granola bar.
-                </li>
-                <li>🍗 Dinner:Lean beef, baked salmon, or roasted chicken with quinoa and steamed vegetables.
-                  </li>
-            </ul>
-        </div>
-        <video controls>
-            <source src="yoga-guide.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-
-    </section>
-
-    <footer>
-      <div class="footer-container">
-            <link rel="stylesheet" href="../css/footer.css">
-            <a href="#prev-page" class="">Previous Page</a>
-            <a href="#prev-page" class="footer-button">Shop  with Us</a>
-            <a href="#top" class="footer-button">Top of Page</a>
-            <a href="#next-page" class="footer-button">Next Page</a>
-            <div class="social-icons">
-                <a href="https://twitter.com" target="_blank">
-                    <img src="../images/footer image/image/twitter.jpg" alt="Twitter">
-                </a>
-                <a href="https://mail.google.com" target="_blank">
-                    <img src="../images/footer image/image/gmail.png" alt="Gmail">
-                </a>
-                <a href="https://instagram.com" target="_blank">
-                    <img src="../images/footer image/image/instagram.png" alt="Instagram">
-                </a>
-                <a href="https://facebook.com" target="_blank">
-                    <img src="../images/footer image/image/facebook.jpg" alt="Facebook">
-                </a>
+        <div class="wg-list" id="exerciseList">
+          <div class="wg-item" data-video="https://www.youtube.com/watch?v=dQw4w9WgXcQ" data-key="wg-warmup">
+            <div class="wg-item-head">
+              <span class="wg-item-title">🔹 Warm-up — 10 min</span>
+              <div class="wg-item-actions">
+                <label class="chk"><input type="checkbox" class="check-item" data-key="wg-warmup"/> Done</label>
+                <button class="wg-expand" aria-expanded="false">Details</button>
+              </div>
             </div>
-        </div>
-        
-    </footer>
+            <div class="wg-item-body">
+              <p>10 minutes brisk walking or dynamic stretching to prepare the body.</p>
+              <ul>
+                <li>Arm circles, leg swings</li>
+                <li>Light band activation</li>
+              </ul>
+              <button class="wg-play" data-src="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Watch (YouTube)</button>
+            </div>
+          </div>
 
-    <script src="../js/weight category.js"></script>
+          <div class="wg-item" data-video="https://www.youtube.com/watch?v=V-_O7nl0Ii0" data-key="wg-strength">
+            <div class="wg-item-head">
+              <span class="wg-item-title">🔹 Strength Training — 3–4x / week</span>
+              <div class="wg-item-actions">
+                <label class="chk"><input type="checkbox" class="check-item" data-key="wg-strength"/> Done</label>
+                <button class="wg-expand" aria-expanded="false">Details</button>
+              </div>
+            </div>
+            <div class="wg-item-body">
+              <p>Focus on compound lifts and progressive overload.</p>
+              <h4>Key lifts</h4>
+              <ul>
+                <li>Squats, Deadlifts, Bench Press</li>
+                <li>Pull-ups, Rows, Overhead Press</li>
+              </ul>
+              <button class="wg-play" data-src="https://www.youtube.com/watch?v=V-_O7nl0Ii0">Watch (YouTube)</button>
+            </div>
+          </div>
+
+          <div class="wg-item" data-video="https://www.youtube.com/watch?v=sBws8MSXN7A" data-key="wg-cooldown">
+            <div class="wg-item-head">
+              <span class="wg-item-title">🔹 Cool-down & Mobility</span>
+              <div class="wg-item-actions">
+                <label class="chk"><input type="checkbox" class="check-item" data-key="wg-cooldown"/> Done</label>
+                <button class="wg-expand" aria-expanded="false">Details</button>
+              </div>
+            </div>
+            <div class="wg-item-body">
+              <p>Static stretches and foam rolling to help recovery.</p>
+              <button class="wg-play" data-src="https://www.youtube.com/watch?v=sBws8MSXN7A">Watch (YouTube)</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <aside class="wg-right">
+        <div class="video-frame" id="videoFrame">
+          <div class="video-placeholder center">Select a lesson and press Watch</div>
+        </div>
+
+        <div class="wg-cards">
+          <div class="card">
+            <h4>Plan Tip</h4>
+            <p>Progressive overload + calorie-surplus are fundamentals for healthy weight gain.</p>
+          </div>
+
+          <div class="card">
+            <h4>Coach</h4>
+            <p><a href="../html/service.html#personal-coach">Hire a coach</a> for a personalized plan.</p>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <!-- YOGA SECTION -->
+    <section id="yoga" class="wg-section">
+      <div class="wg-left">
+        <h2>Yoga Plan</h2>
+        <p class="muted">Yoga to improve flexibility, breathing and recovery.</p>
+
+        <div class="wg-list" id="yogaList">
+          <div class="wg-item" data-video="https://www.youtube.com/watch?v=VbfpW0pbvaU" data-key="wg-bridge">
+            <div class="wg-item-head">
+              <span class="wg-item-title">🔸 Bridge Pose (Setu Bandha)</span>
+              <div class="wg-item-actions">
+                <label class="chk"><input type="checkbox" class="check-item" data-key="wg-bridge"/> Done</label>
+                <button class="wg-expand" aria-expanded="false">Details</button>
+              </div>
+            </div>
+            <div class="wg-item-body">
+              <p>Strengthens glutes and lower back — helpful for hip extension.</p>
+              <button class="wg-play" data-src="https://www.youtube.com/watch?v=VbfpW0pbvaU">Watch (YouTube)</button>
+            </div>
+          </div>
+
+          <div class="wg-item" data-video="https://www.youtube.com/watch?v=C0DPdy98e4c" data-key="wg-plank">
+            <div class="wg-item-head">
+              <span class="wg-item-title">🔸 Plank</span>
+              <div class="wg-item-actions">
+                <label class="chk"><input type="checkbox" class="check-item" data-key="wg-plank"/> Done</label>
+                <button class="wg-expand" aria-expanded="false">Details</button>
+              </div>
+            </div>
+            <div class="wg-item-body">
+              <p>Core stability to support heavy lifts.</p>
+              <button class="wg-play" data-src="https://www.youtube.com/watch?v=C0DPdy98e4c">Watch (YouTube)</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <aside class="wg-right">
+        <div class="video-frame" id="yogaFrame">
+          <div class="video-placeholder center">Select a yoga lesson and press Watch</div>
+        </div>
+
+        <div class="wg-cards">
+          <div class="card">
+            <h4>Breathing</h4>
+            <p>Practice diaphragmatic breathing on rest days to aid recovery.</p>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <!-- DIET SECTION -->
+    <section id="diet" class="wg-section">
+      <div class="wg-left">
+        <h2>Diet Plan</h2>
+        <p class="muted">Meals focused on calories + quality protein to support mass gain.</p>
+
+        <div class="tabs" role="tablist">
+          <button class="tablink active" data-tab="Veg">🌱 Vegetarian</button>
+          <button class="tablink" data-tab="NonVeg">🍗 Non-Vegetarian</button>
+        </div>
+
+        <div class="tabcontent active" id="Veg">
+          <ul class="diet-list">
+            <li><strong>Breakfast:</strong> Peanut butter on whole-grain toast + banana; protein smoothie with oats & milk.</li>
+            <li><strong>Lunch:</strong> Paneer curry, brown rice, dal, avocado salad.</li>
+            <li><strong>Snack:</strong> Protein bar or yogurt with nuts.</li>
+            <li><strong>Dinner:</strong> Pasta with tofu & olive oil; add extra nuts/seeds.</li>
+          </ul>
+        </div>
+
+        <div class="tabcontent" id="NonVeg" aria-hidden="true">
+          <ul class="diet-list">
+            <li><strong>Breakfast:</strong> Omelette (3 eggs), whole-grain toast, full-fat milk smoothie.</li>
+            <li><strong>Lunch:</strong> Grilled chicken/fish, sweet potato, sautéed greens.</li>
+            <li><strong>Snack:</strong> Protein shake with nuts.</li>
+            <li><strong>Dinner:</strong> Salmon or lean beef, quinoa, vegetables.</li>
+          </ul>
+        </div>
+      </div>
+
+      <aside class="wg-right">
+        <div class="card">
+          <h4>Calorie Tip</h4>
+          <p>Eat calorie-dense snacks between meals: nuts, peanut butter, shakes.</p>
+        </div>
+
+        <div class="card">
+          <h4>Track Progress</h4>
+          <p>Use the <a href="../html/bmi.html">BMI tool</a> and <a href="../html/progress.html">Progress Tracker</a>.</p>
+        </div>
+      </aside>
+    </section>
+
+  </main>
+
+  <!-- Booking Modal -->
+  <div id="bookingModal" class="modal" aria-hidden="true">
+    <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="bookingTitle">
+      <button class="modal-close" id="closeBooking" aria-label="Close">&times;</button>
+      <h3 id="bookingTitle">Book a Personal Coach</h3>
+      <form id="bookingForm">
+        <div class="form-row"><label>Name</label><input type="text" id="bk_name" required></div>
+        <div class="form-row"><label>Email</label><input type="email" id="bk_email" required></div>
+        <div class="form-row"><label>Phone</label><input type="tel" id="bk_phone"></div>
+        <div class="form-row"><label>Preferred Date</label><input type="date" id="bk_date"></div>
+        <div class="form-row"><label>Notes</label><textarea id="bk_notes"></textarea></div>
+        <div class="form-row center"><button class="btn-primary" type="submit">Request Booking</button></div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div id="footer"></div>
+
+  <!-- Scripts -->
+  <script src="../navbar/navbar.js" defer></script>
+  <script src="../footer/footer.js" defer></script>
+  <script src="../js/weight-category.js" defer></script>
 </body>
 </html>

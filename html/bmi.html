@@ -1,62 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BMI PRO Calculator</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator | Fit N Fine</title>
 
-  <link rel="stylesheet" href="../css/bmi-pro.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/bmi.css">
 </head>
 
 <body>
 
-<div class="bmi-wrapper">
+<div id="navbar"></div>
 
-    <div class="bmi-card">
+<section class="bmi-container">
+    <h1 class="bmi-title">Check Your BMI</h1>
+    <p class="bmi-sub">Enter your details to get your category and recommended workout plan.</p>
 
-        <h1 class="title">BMI  Calculator</h1>
-        <p class="subtitle">Get AI-powered workout & diet suggestions instantly.</p>
-
-        <div class="inputs">
-            <input type="number" id="weight" placeholder="Weight (kg)">
-            <input type="number" id="height" placeholder="Height (cm)">
-        </div>
-
-        <button class="calc-btn" onclick="runBMI()">Calculate BMI</button>
-
-        <!-- Gauge Section -->
-        <div class="gauge hidden">
-            <div class="gauge-circle">
-                <div class="gauge-fill" id="gaugeFill"></div>
-                <div class="gauge-cover" id="gaugeValue">0</div>
+    <div class="bmi-card glass">
+        <form id="bmiForm">
+            <div class="input-group">
+                <label>Weight (kg)</label>
+                <input type="number" id="weight" required>
             </div>
+
+            <div class="input-group">
+                <label>Height (cm)</label>
+                <input type="number" id="height" required>
+            </div>
+
+            <button class="bmi-btn" type="submit">Calculate BMI</button>
+        </form>
+
+        <div id="bmiResult" class="result-box hidden">
+            <h2 id="bmiValue">Your BMI: --</h2>
+            <p id="bmiCategory"></p>
+            <p id="bmiMessage"></p>
+
+            <a id="bmiRedirect" href="#" class="redirect-btn hidden">View Recommended Plan →</a>
         </div>
-
-        <!-- Result Section -->
-        <div id="result-box" class="result-box hidden">
-            <h2 id="bmi-text"></h2>
-            <p id="bmi-status"></p>
-
-            <h3 class="sub">Recommended Workout</h3>
-            <p id="workout-plan"></p>
-
-            <h3 class="sub">Recommended Diet</h3>
-            <p id="diet-plan"></p>
-
-            <button class="save-btn" onclick="saveHistory()">Save to History</button>
-        </div>
-
-        <!-- History Section -->
-        <div class="history-box">
-            <h3>Past BMI Records</h3>
-            <ul id="history-list"></ul>
-        </div>
-
     </div>
+</section>
 
-</div>
+<div id="footer"></div>
 
-<script src="../js/bmi-pro"></script>
+<script src="../js/navbar.js"></script>
+<script src="../js/footer.js"></script>
+<script src="../js/bmi.js"></script>
 
 </body>
 </html>

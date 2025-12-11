@@ -1,18 +1,12 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fit N Fine — Home</title>
+    <title>Fit N Fine | Home</title>
 
-    <!-- Remix Icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css">
-
-    <!-- Navbar & Footer -->
-    <link rel="stylesheet" href="../navbar/navbar.css">
-    <link rel="stylesheet" href="../footer/footer.css">
-
-    <!-- Home Page CSS -->
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/footer.css">
     <link rel="stylesheet" href="../css/home.css">
 </head>
 
@@ -21,113 +15,109 @@
     <!-- NAVBAR -->
     <div id="navbar"></div>
 
-    <!-- THEME TOGGLE BUTTON -->
-    <button id="themeToggle" class="theme-btn">
-        <i class="ri-sun-line"></i>
-    </button>
-
     <!-- HERO SECTION -->
     <section class="hero">
-        <div class="hero-content">
-            <h1>Transform Your Fitness Journey</h1>
-            <p>Track your progress, follow curated workout plans, shop premium fitness gear & more.</p>
+        <div class="hero-left">
+            <h1>Your Fitness Transformation Starts Today</h1>
+            <p>Personalized workout plans, modern tools, and clean neon UI built for serious results.</p>
 
             <div class="hero-buttons">
-                <a href="../html/service.html" class="btn-primary">Explore Services</a>
-                <a href="../html/progress.html" class="btn-secondary">Track Progress</a>
+                <a href="../html/bmi.html" class="btn-primary">Start BMI Test →</a>
+                <a href="../html/service-pro.html" class="btn-secondary">Explore Programs</a>
             </div>
         </div>
-        <div class="hero-overlay"></div>
+
+        <div class="hero-right">
+            <img src="../images/hero-fitness.png" alt="Fitness Person">
+        </div>
     </section>
 
-    <!-- FEATURES -->
-    <section class="features">
-        <h2 class="section-title">Everything You Need To Stay Fit</h2>
+    <!-- MODERN SLIDER -->
+    <section class="slider-container">
+        <div class="slider">
+            <div class="slide active">
+                <img src="../images/slider1.jpg">
+                <div class="caption">
+                    <h2>Train Hard, Stay Strong</h2>
+                    <p>Strength programs for every stage.</p>
+                </div>
+            </div>
 
-        <div class="feature-grid">
+            <div class="slide">
+                <img src="../images/slider2.jpg">
+                <div class="caption">
+                    <h2>Smart Diet Guidance</h2>
+                    <p>Eat clean, feel energetic, stay fit.</p>
+                </div>
+            </div>
+
+            <div class="slide">
+                <img src="../images/slider3.jpg">
+                <div class="caption">
+                    <h2>Track Real Progress</h2>
+                    <p>Advanced tracking with visual insights.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="slider-dots">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+    </section>
+
+    <!-- FEATURES SECTION -->
+    <section class="features-section">
+        <h2 class="section-heading">Why Choose Fit N Fine?</h2>
+
+        <div class="features-grid">
 
             <div class="feature-card">
-                <i class="ri-bar-chart-line"></i>
-                <h3>BMI Calculator</h3>
-                <p>Instantly calculate your fitness level & get tips.</p>
-                <a href="../html/bmi.html" class="card-btn">Check BMI</a>
+                <img src="../images/icon1.png">
+                <h3>Personalized Workouts</h3>
+                <p>Your goals define your routine.</p>
             </div>
 
             <div class="feature-card">
-                <i class="ri-line-chart-line"></i>
+                <img src="../images/icon2.png">
+                <h3>BMI Smart Analysis</h3>
+                <p>Instant category detection + suggestions.</p>
+            </div>
+
+            <div class="feature-card">
+                <img src="../images/icon3.png">
                 <h3>Progress Tracker</h3>
-                <p>Track workouts, weight & personal goals.</p>
-                <a href="../html/progress.html" class="card-btn">Open Tracker</a>
+                <p>Charts, logs & performance reports.</p>
             </div>
 
             <div class="feature-card">
-                <i class="ri-run-line"></i>
-                <h3>Workout Plans</h3>
-                <p>Weight Gain, Loss, Yoga & full programs.</p>
-                <a href="../html/service.html" class="card-btn">View Plans</a>
-            </div>
-
-            <div class="feature-card">
-                <i class="ri-shopping-bag-3-line"></i>
+                <img src="../images/icon4.png">
                 <h3>Fitness Store</h3>
-                <p>Buy quality equipment & accessories.</p>
-                <a href="../html/shopping.html" class="card-btn">Visit Shop</a>
+                <p>Neon gear, supplements & essentials.</p>
             </div>
 
         </div>
     </section>
 
-    <!-- IMAGE SLIDER -->
-    <section class="slider">
-        <h2 class="section-title">Daily Fitness Inspiration</h2>
-
-        <div class="slider-container">
-            <div class="slide-track">
-                <img src="../images/hero/home1.jpg">
-                <img src="../images/hero/home2.jpg">
-                <img src="../images/hero/home3.jpg">
-                <img src="../images/hero/home4.jpg">
-                <img src="../images/hero/home5.jpg">
-
-                <!-- Repeat for infinite scroll -->
-                <img src="../images/hero/home1.jpg">
-                <img src="../images/hero/home2.jpg">
-                <img src="../images/hero/home3.jpg">
-                <img src="../images/hero/home4.jpg">
-                <img src="../images/hero/home5.jpg">
-            </div>
+    <!-- INFINITE SLIDER -->
+    <section class="infinite-slider">
+        <div class="track">
+            <img src="../images/slider1.jpg">
+            <img src="../images/slider2.jpg">
+            <img src="../images/slider3.jpg">
+            <img src="../images/slider1.jpg">
+            <img src="../images/slider2.jpg">
+            <img src="../images/slider3.jpg">
         </div>
-    </section>
-
-    <!-- CTA SECTION -->
-    <section class="cta">
-        <h2>Start Your Transformation Today</h2>
-        <p>Your fitness future begins with one click.</p>
-        <a href="../html/login.html" class="btn-primary large">Get Started</a>
     </section>
 
     <!-- FOOTER -->
     <div id="footer"></div>
 
-    <!-- SCRIPTS -->
-    <script src="../navbar/navbar.js"></script>
-    <script src="../footer/footer.js"></script>
-
-    <!-- THEME HANDLER SCRIPT -->
-    <script>
-        const root = document.documentElement;
-        const toggleBtn = document.getElementById("themeToggle");
-
-        toggleBtn.addEventListener("click", () => {
-            const currentTheme = root.getAttribute("data-theme");
-            const newTheme = currentTheme === "dark" ? "light" : "dark";
-
-            root.setAttribute("data-theme", newTheme);
-            toggleBtn.innerHTML = newTheme === "dark"
-                ? '<i class="ri-sun-line"></i>'
-                : '<i class="ri-moon-line"></i>';
-        });
-    </script>
+<script src="../js/navbar.js"></script>
+<script src="../js/footer.js"></script>
+<script src="../js/home.js"></script>
 
 </body>
 </html>

@@ -1,58 +1,55 @@
-function calculateBMI() {
-    const w = parseFloat(document.getElementById("weight").value);
-    const h = parseFloat(document.getElementById("height").value) / 100;
+document.addEventListener("DOMContentLoaded", () => {
 
-    if (!w || !h) {
-        alert("Please enter correct weight & height.");
-        return;
-    }
+    const form = document.getElementById("bmiForm");
+    const resultBox = document.getElementById("bmiResult");
 
-    const bmi = (w / (h * h)).toFixed(1);
+    const bmiValueText = document.getElementById("bmiValue");
+    const bmiCategoryText = document.getElementById("bmiCategory");
+    const bmiMessageText = document.getElementById("bmiMessage");
+    const redirectBtn = document.getElementById("bmiRedirect");
 
-    document.getElementById("bmi-result").innerHTML = `<h2>Your BMI: ${bmi}</h2>`;
+    form.addEventListener("submit", function (e) {
+        e.preventDefault();
 
-    let suggestion = "";
-    let redirectPage = "";
+        let weight = parseFloat(document.getElementById("weight").value);
+        let height = parseFloat(document.getElementById("height").value) / 100;
 
-    if (bmi < 18.5) {
-        suggestion = `
-            <h3>You are Underweight</h3>
-            <p>Recommended: Weight Gain Program</p>
-            <button onclick="goToPlan('${'../html/weightgain.html'}')" class="bmi-btn">View Workout Plan →</button>
-        `;
-        redirectPage = "../html/weightgain.html";
-    }
+        let bmi = (weight / (height * height)).toFixed(1);
 
-    else if (bmi >= 18.5 && bmi < 24.9) {
-        suggestion = `
-            <h3>Normal Weight Range</h3>
-            <p>Recommended: Balanced Fitness Program</p>
-            <button onclick="goToPlan('${'../html/normal weight category.html'}')" class="bmi-btn">View Workout Plan →</button>
-        `;
-        redirectPage = "../html/normal weight category.html";
-    }
+        bmiValueText.textContent = "Your BMI: " + bmi;
 
-    else if (bmi >= 25 && bmi < 29.9) {
-        suggestion = `
-            <h3>You are Overweight</h3>
-            <p>Recommended: Weight Loss + Cardio Training Plan</p>
-            <button onclick="goToPlan('${'../html/overweight category.html'}')" class="bmi-btn">View Workout Plan →</button>
-        `;
-        redirectPage = "../html/overweight category.html";
-    }
+        let category = "";
+        let message = "";
+        let link = "";
 
-    else {
-        suggestion = `
-            <h3>You fall in the Obesity Range</h3>
-            <p>Recommended: Strict Obesity Management Program</p>
-            <button onclick="goToPlan('${'../html/obesity.html'}')" class="bmi-btn">View Workout Plan →</button>
-        `;
-        redirectPage = "../html/obesity.html";
-    }
+        if (bmi < 18.5) {
+            category = "Underweight";
+            message = "You need healthy weight gain. Follow a calorie-rich diet & strength training.";
+            link = "../html/underweight.html";
+        }
+        else if (bmi >= 18.5 && bmi < 25) {
+            category = "Normal Weight";
+            message = "Great job! Maintain your shape with balanced workouts.";
+            link = "../html/normal.html";
+        }
+        else if (bmi >= 25 && bmi < 30) {
+            category = "Overweight";
+            message = "You should focus on fat loss & cardio-based workouts.";
+            link = "../html/overweight.html";
+        }
+        else {
+            category = "Obese";
+            message = "Health risk is higher. Start a controlled diet + low-impact exercises.";
+            link = "../html/obese.html";
+        }
 
-    document.getElementById("bmi-suggestion").innerHTML = suggestion;
-}
+        bmiCategoryText.textContent = "Category: " + category;
+        bmiMessageText.textContent = message;
 
-function goToPlan(url) {
-    window.location.href = url;
-}
+        redirectBtn.href = link;
+        redirectBtn.classList.remove("hidden");
+
+        resultBox.classList.remove("hidden");
+    });
+
+});

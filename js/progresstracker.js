@@ -1,136 +1,61 @@
-let progressData = JSON.parse(localStorage.getItem("progressData")) || [];
-let badgesUnlocked = [];
+document.addEventListener("DOMContentLoaded", loadProgress);
 
-document.getElementById("progressForm").addEventListener("submit", function (e) {
-    e.preventDefault();
+/* ---------------- WEIGHT ---------------- */
+function updateWeight() {
+    let w = document.getElementById("weightInput").value;
+    if (!w) return;
 
-    const entry = {
-        date: new Date().toLocaleDateString(),
-        weight: value("weight"),
-        chest: value("chest"),
-        arms: value("arms"),
-        waist: value("waist"),
-        fat: value("bodyfat"),
-        steps: value("steps"),
-        workout: value("workout"),
-        calories: value("calories"),
-        mood: document.getElementById("mood").value,
-        notes: document.getElementById("notes").value
-    };
+    localStorage.setItem("currentWeight", w);
 
-    progressData.push(entry);
-    localStorage.setItem("progressData", JSON.stringify(progressData));
+    let history = JSON.parse(localStorage.getItem("weightHistory") || "[]");
+    history.unshift(w + " kg — " + new Date().toLocaleDateString());
+    localStorage.setItem("weightHistory", JSON.stringify(history));
 
-    unlockBadges(entry);
-    renderBadges();
-    renderTable();
-    renderChart();
-});
-
-function value(id) {
-    return document.getElementById(id).value || "—";
+    loadProgress();
 }
 
-/* -------------------------------
-   BADGE SYSTEM 
---------------------------------*/
+function loadWeight() {
+    let w = localStorage.getItem("currentWeight") || 0;
+    document.getElementById("weightCircle").textContent = w + " kg";
 
-function unlockBadges(entry) {
-    if (entry.steps > 10000 && !badgesUnlocked.includes("10k Steps")) {
-        badgesUnlocked.push("10k Steps");
-    }
-
-    if (entry.workout > 60 && !badgesUnlocked.includes("1 Hour Workout")) {
-        badgesUnlocked.push("1 Hour Workout");
-    }
-
-    if (entry.calories > 500 && !badgesUnlocked.includes("500+ Calories Burned")) {
-        badgesUnlocked.push("500+ Calories Burned");
-    }
-
-    localStorage.setItem("badges", JSON.stringify(badgesUnlocked));
+    let history = JSON.parse(localStorage.getItem("weightHistory") || "[]");
+    document.getElementById("weightHistory").innerHTML =
+        history.map(x => `<li>${x}</li>`).join("");
 }
 
-function renderBadges() {
-    const box = document.getElementById("badgeGrid");
-    badgesUnlocked = JSON.parse(localStorage.getItem("badges")) || [];
-    box.innerHTML = "";
-
-    badgesUnlocked.forEach(badge => {
-        box.innerHTML += <div class="badge">${badge}</div>;
-    });
+/* ---------------- STEPS ---------------- */
+function updateSteps() {
+    let steps = document.getElementById("stepsInput").value;
+    localStorage.setItem("steps", steps);
+    loadProgress();
 }
 
-renderBadges();
+function loadSteps() {
+    let steps = localStorage.getItem("steps") || 0;
+    let percent = Math.min((steps / 10000) * 440, 440);
 
-/* -------------------------------
-   TABLE 
---------------------------------*/
-
-function renderTable() {
-    const table = document.getElementById("progressTable");
-    table.innerHTML = "";
-
-    progressData.forEach(entry => {
-        table.innerHTML += `
-            <tr>
-                <td>${entry.date}</td>
-                <td>${entry.weight}</td>
-                <td>${entry.chest}</td>
-                <td>${entry.arms}</td>
-                <td>${entry.waist}</td>
-                <td>${entry.fat}</td>
-                <td>${entry.steps}</td>
-                <td>${entry.workout}</td>
-                <td>${entry.calories}</td>
-                <td>${entry.mood}</td>
-                <td>${entry.notes}</td>
-            </tr>
-        `;
-    });
+    document.getElementById("stepsProgress").style.strokeDashoffset = 440 - percent;
+    document.getElementById("stepsText").textContent = steps;
 }
 
-renderTable();
-
-/* -------------------------------
-   CHART
---------------------------------*/
-
-let chart;
-
-function renderChart() {
-    const ctx = document.getElementById("weightChart");
-
-    const labels = progressData.map(e => e.date);
-    const weights = progressData.map(e => e.weight);
-
-    if (chart) chart.destroy();
-
-    chart = new Chart(ctx, {
-        type: "line",
-        data: {
-            labels,
-            datasets: [{
-                label: "Weight (kg)",
-                data: weights,
-                borderColor: "#ff8a00",
-                backgroundColor: "rgba(255,138,0,0.3)",
-                tension: 0.4,
-                fill: true
-            }]
-        },
-
-        options: {
-            responsive: true,
-            plugins: {
-                legend: { labels: { color: "#fff" } }
-            },
-            scales: {
-                x: { ticks: { color: "#fff" } },
-                y: { ticks: { color: "#fff" } }
-            }
-        }
-    });
+/* ---------------- CALORIES ---------------- */
+function updateCalories() {
+    let cal = document.getElementById("calorieInput").value;
+    localStorage.setItem("calories", cal);
+    loadProgress();
 }
 
-renderChart();
+function loadCalories() {
+    let cal = localStorage.getItem("calories") || 0;
+    let percent = Math.min((cal / 500) * 440, 440);
+
+    document.getElementById("calorieProgress").style.strokeDashoffset = 440 - percent;
+    document.getElementById("calorieText").textContent = cal;
+}
+
+/* ---------------- LOAD ALL ---------------- */
+function loadProgress() {
+    loadWeight();
+    loadSteps();
+    loadCalories();
+}

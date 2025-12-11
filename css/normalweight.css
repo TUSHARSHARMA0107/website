@@ -1,6 +1,6 @@
 :root {
-    --primary: #ff3b6a;
-    --primary-soft: #ff9ab6;
+    --primary: #0fbf8a;
+    --primary-soft: #3ccf4e;
     --text-dark: #222;
     --text-light: #555;
     --card-bg: #ffffffcc;
@@ -8,14 +8,14 @@
 
 body {
     margin: 0;
-    background: #fff4f6;
+    background: #f2fff4;
     font-family: Poppins, sans-serif;
 }
 
 /* HERO */
 .hero {
     height: 38vh;
-    background: linear-gradient(to right, #ff3b6a, #ff9ab6);
+    background: linear-gradient(to right, #0fbf8a, #3ccf4e);
     display: flex;
     align-items: flex-end;
     padding: 40px;
@@ -51,7 +51,7 @@ body {
     color: var(--text-light);
 }
 
-/* CARDS */
+/* CARD GRID */
 .card-grid {
     display: flex;
     gap: 22px;
@@ -65,14 +65,14 @@ body {
     border-radius: 18px;
     padding-bottom: 15px;
     backdrop-filter: blur(12px);
-    box-shadow: 0 10px 20px rgba(255, 50, 80, 0.15);
-    transition: .3s ease;
+    box-shadow: 0 10px 20px rgba(15, 191, 138, 0.15);
+    transition: .3s;
     cursor: pointer;
 }
 
 .card:hover {
     transform: translateY(-6px);
-    box-shadow: 0 20px 30px rgba(255, 50, 80, 0.25);
+    box-shadow: 0 20px 30px rgba(15, 191, 138, 0.25);
 }
 
 .card img {
@@ -104,7 +104,7 @@ video {
     border: 3px solid var(--primary);
 }
 
-/* DIET TABS */
+/* TABS */
 .tabs {
     margin-top: 20px;
 }

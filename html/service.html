@@ -1,97 +1,165 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fit N Fine - Services</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Services — Fit N Fine</title>
 
-  <!-- Icons -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css">
-
-  <!-- Component CSS -->
-  <link rel="stylesheet" href="../navbar/navbar.css">
-  <link rel="stylesheet" href="../footer/footer.css">
-
-  <!-- Page CSS -->
+  <link rel="stylesheet" href="../css/navbar.css">
+  <link rel="stylesheet" href="../css/footer.css">
   <link rel="stylesheet" href="../css/service.css">
 </head>
-
 <body>
 
-<!-- NAVBAR (Auto Inject) -->
-<div id="navbar"></div>
+  <!-- reusable navbar -->
+  <div id="navbar"></div>
 
-
-<!-- HERO SECTION -->
-<section class="service-hero">
-  <h1>Our Premium Fitness Services</h1>
-  <p>Transform your lifestyle with personalized programs designed for you.</p>
-</section>
-
-
-<!-- SERVICE CARDS -->
-<section class="services">
-  <h2 class="section-title">Choose Your Journey</h2>
-
-  <div class="service-container">
-
-    <!-- Weight Loss -->
-    <div class="service-card">
-      <img src="../images/services/weight-loss.jpg" alt="Weight Loss">
-      <h3>Weight Loss Program</h3>
-      <p>Scientifically designed routines & diets to burn fat faster.</p>
-      <a href="#" class="btn">View Program</a>
+  <!-- HERO -->
+  <section class="svc-hero">
+    <div class="container hero-inner">
+      <div class="hero-left">
+        <h1>Pro Programs & Coaching</h1>
+        <p class="lead">Science-backed workouts • Nutrition plans • Personal coaching — built for real results.</p>
+        <div class="hero-ctas">
+          <a class="btn primary" href="../html/bmi.html">Start with BMI</a>
+          <a class="btn ghost" href="#packages">See Packages</a>
+        </div>
+      </div>
+      <div class="hero-right">
+        <div class="hero-art glass">
+          <img src="../images/services/coach-hero.png" alt="Coach illustration">
+        </div>
+      </div>
     </div>
+  </section>
 
-    <!-- Weight Gain -->
-    <div class="service-card">
-      <img src="../images/services/weight-gain.jpg" alt="Weight Gain">
-      <h3>Weight Gain Program</h3>
-      <p>Healthy bulking plans to build quality muscle mass.</p>
-      <a href="./overweight category.html" class="btn">View Plan</a>
-    </div>
+  <!-- SERVICE GRID -->
+  <main class="container" style="padding:36px 18px 80px;">
+    <section class="svc-grid">
+      <article class="svc-card glass">
+        <div class="icon">🏋️‍♂️</div>
+        <h3>Personal Training</h3>
+        <p>1:1 coaching, progressive overload programs, recorded form checks and weekly plan adjustments.</p>
+        <a class="btn small" href="../html/progress.html">Start Training</a>
+      </article>
 
-    <!-- Healthy Living -->
-    <div class="service-card">
-      <img src="../images/services/healthy-living.jpg" alt="Healthy Living">
-      <h3>Healthy Living</h3>
-      <p>Balanced routines for long-term sustainable lifestyle.</p>
-      <a href="./normal weight category.html" class="btn">Learn More</a>
-    </div>
+      <article class="svc-card glass">
+        <div class="icon">🥗</div>
+        <h3>Nutrition Coaching</h3>
+        <p>Calorie-targeted plans, meal templates, grocery lists and weekly check-ins for sustainable progress.</p>
+        <a class="btn small" href="../html/contact.html">Consult a Dietitian</a>
+      </article>
 
-    <!-- Personal Coach -->
-    <div class="service-card">
-      <img src="../images/services/personal-coach.jpg" alt="Coach">
-      <h3>Hire a Personal Coach</h3>
-      <p>Get 1-on-1 coaching with customized fitness guidance.</p>
-      <a href="#" class="btn">Hire Now</a>
-    </div>
+      <article class="svc-card glass">
+        <div class="icon">🧭</div>
+        <h3>Program Design</h3>
+        <p>Ready-to-follow programs for weight-loss, hypertrophy, or athletic conditioning — customized to you.</p>
+        <a class="btn small" href="../html/normal-pro.html">Browse Programs</a>
+      </article>
 
-    <!-- Shopping -->
-    <div class="service-card">
-      <img src="../images/services/shop.jpg" alt="Shop">
-      <h3>Shop Fitness Products</h3>
-      <p>Buy premium equipment, supplements & fitness accessories.</p>
-      <a href="./shopping.html" class="btn">Shop Now</a>
-    </div>
+      <article class="svc-card glass">
+        <div class="icon">📊</div>
+        <h3>Progress Tracking</h3>
+        <p>Advanced tracker with rings, trend charts and milestones to keep motivation high.</p>
+        <a class="btn small" href="../html/progress.html">View Tracker</a>
+      </article>
+    </section>
 
-    <!-- Fitness Programs -->
-    <div class="service-card">
-      <img src="../images/services/fitness-program.jpg" alt="Fitness Programs">
-      <h3>Join Fitness Programs</h3>
-      <p>Structured programs for beginners to advanced athletes.</p>
-      <a href="#" class="btn">Join Program</a>
-    </div>
+    <!-- PACKAGES -->
+    <section id="packages" class="packages">
+      <h2 class="section-heading">Packages (Best value)</h2>
 
-  </div>
-</section>
+      <div class="package-grid">
+        <div class="package card glass">
+          <h4>Starter</h4>
+          <p class="price">₹999 / mo</p>
+          <ul>
+            <li>Basic program</li>
+            <li>Weekly check-in</li>
+            <li>Access to store discounts</li>
+          </ul>
+          <a class="btn" href="../html/signup.html">Choose Starter</a>
+        </div>
 
+        <div class="package card glass featured">
+          <div class="ribbon">Popular</div>
+          <h4>Pro</h4>
+          <p class="price">₹2499 / mo</p>
+          <ul>
+            <li>1:1 monthly coaching</li>
+            <li>Personalized nutrition</li>
+            <li>Progress analytics</li>
+            <li>Priority support</li>
+          </ul>
+          <a class="btn" href="../html/signup.html">Choose Pro</a>
+        </div>
 
-<!-- FOOTER (Auto Inject) -->
-<div id="footer"></div>
+        <div class="package card glass">
+          <h4>Coach</h4>
+          <p class="price">₹4499 / mo</p>
+          <ul>
+            <li>Dedicated coach weekly</li>
+            <li>Video form reviews</li>
+            <li>Advanced periodization</li>
+            <li>Supplements guidance</li>
+          </ul>
+          <a class="btn" href="../html/contact.html">Talk to Sales</a>
+        </div>
+      </div>
+    </section>
 
-<script src="../navbar/navbar.js"></script>
-<script src="../footer/footer.js"></script>
+    <!-- COACHES -->
+    <section class="coaches">
+      <h2 class="section-heading">Our Coaches</h2>
+      <div class="coach-grid">
+        <div class="coach card glass">
+          <img src="../images/services/coach1.jpg" alt="Coach 1">
+          <h4>Rohit — Strength Coach</h4>
+          <p class="small">10+ yrs experience • Powerlifting & hypertrophy</p>
+          <a class="btn small" href="../html/contact.html">Message</a>
+        </div>
+        <div class="coach card glass">
+          <img src="../images/services/coach2.jpg" alt="Coach 2">
+          <h4>Aman — Nutritionist</h4>
+          <p class="small">B.Sc Nutrition • Body recomposition expert</p>
+          <a class="btn small" href="../html/contact.html">Message</a>
+        </div>
+        <div class="coach card glass">
+          <img src="../images/services/coach3.jpg" alt="Coach 3">
+          <h4>Vikram — Conditioning</h4>
+          <p class="small">Endurance & HIIT specialist</p>
+          <a class="btn small" href="../html/contact.html">Message</a>
+        </div>
+      </div>
+    </section>
 
+    <!-- FAQ -->
+    <section class="faq">
+      <h2 class="section-heading">FAQ</h2>
+      <div class="faq-grid">
+        <details class="faq-item glass">
+          <summary>How quickly will I see results?</summary>
+          <p>Depends on plan & adherence — typically 4–8 weeks for measurable changes. We track progress weekly.</p>
+        </details>
+
+        <details class="faq-item glass">
+          <summary>Can I switch plans later?</summary>
+          <p>Yes — upgrade/downgrade from the account dashboard or contact support for custom changes.</p>
+        </details>
+
+        <details class="faq-item glass">
+          <summary>Do you offer refunds?</summary>
+          <p>We have a 7-day trial policy for most packages. Contact support for details.</p>
+        </details>
+      </div>
+    </section>
+  </main>
+
+  <!-- reusable footer -->
+  <div id="footer"></div>
+
+  <script src="../js/navbar.js"></script>
+  <script src="../js/footer.js"></script>
+  <script src="../js/service-pro.js"></script>
 </body>
 </html>

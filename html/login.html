@@ -1,77 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - Split Screen</title>
-    <link rel="stylesheet" href="../css/login.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login — Fit N Fine</title>
+<link rel="stylesheet" href="../css/login.css">
+<link rel="stylesheet" href="../css/footer.css">
 </head>
+
 <body>
 
-<div class="container">
+<section class="login-wrapper">
 
-    <div class="left">
-        <div class="overlay"></div>
-        <div class="text">
-            <h1>Welcome Back</h1>
-            <p>Manage your fitness journey with us</p>
-        </div>
-    </div>
+    <div class="login-card glass">
 
-    <div class="right">
+        <h2 class="title">Welcome Back</h2>
+        <p class="subtitle">Sign in to continue your fitness journey</p>
 
-        <!-- -------- GUIDE SECTION -------- -->
-        <div class="guide-box" id="guideSection">
-            <h2>Before You Login</h2>
-            <ul>
-                <li>✔ Track and manage fitness progress</li>
-                <li>✔ View our personalized workout plans</li>
-                <li>✔ Monitor your health metrics</li>
-                
-            </ul>
-
-            <button class="btn" onclick="showLogin()">Proceed to Login</button>
-        </div>
-
-        <!-- -------- LOGIN FORM -------- -->
-        <form class="form-box" id="loginForm" style="display:none;">
-            <h2>Login</h2>
+        <form>
 
             <div class="input-group">
                 <label>Email</label>
-                <input type="email" required>
+                <input type="email" placeholder="Enter your email" required>
             </div>
 
             <div class="input-group">
                 <label>Password</label>
-                <input type="password" required>
+                <input type="password" placeholder="Enter your password" required>
             </div>
 
-            <button class="btn" onclick="goHome(event)">Login</button>
+            <button class="login-btn"
+                onclick="event.preventDefault(); window.location.href='../html/home.html'">
+                Login
+            </button>
 
-            <p class="bottom-text">
-                New here? <a href="#">Create an account</a>
+            <p class="bottom-note">
+                New here? <a href="../html/signup.html">Create account</a>
             </p>
+
         </form>
 
     </div>
 
-</div>
+</section>
 
-<script>
-    // GUIDE → LOGIN FORM
-    function showLogin() {
-        document.getElementById("guideSection").style.display = "none";
-        document.getElementById("loginForm").style.display = "block";
-    }
+<!-- Footer Attach -->
+<footer class="footer-section">
+    <div class="footer-content">
+        <div class="f-col">
+            <img src="../images/logo.png" class="footer-logo" alt="">
+            <p>Fit N Fine — Build your best body.</p>
+        </div>
 
-    // LOGIN → HOME PAGE
-    function goHome(e) {
-        e.preventDefault();
-        window.location.href = "./mainpage.html"; 
-    }
-</script>
+        <div class="f-col">
+            <h4>Quick Links</h4>
+            <a href="../html/home.html">Home</a>
+            <a href="../html/service-pro.html">Services</a>
+            <a href="../html/bmi.html">BMI</a>
+            <a href="../html/contact.html">Contact</a>
+        </div>
+
+        <div class="f-col">
+            <h4>Follow Us</h4>
+            <div class="social-row">
+                <img src="../images/social/insta.png">
+                <img src="../images/social/twitter.png">
+                <img src="../images/social/facebook.png">
+            </div>
+        </div>
+    </div>
+</footer>
 
 </body>
 </html>
-

@@ -1,0 +1,69 @@
+:root{
+  --blue:#007BFF;
+  --green:#00FF88;
+  --glass: rgba(255,255,255,0.12);
+  --bg:#F5F7FA;
+  --text:#111;
+  --card-shadow: 0 18px 50px rgba(0,0,0,0.08);
+}
+
+/* Page base */
+body{margin:0;font-family:"Poppins",system-ui,Segoe UI,Roboto,Helvetica,Arial;background:var(--bg);color:var(--text);-webkit-font-smoothing:antialiased}
+.container{max-width:1150px;margin:0 auto;padding:22px}
+
+/* Hero */
+.hero {
+  display:flex;gap:24px;align-items:center;padding:46px 20px;
+  position:relative;
+}
+.hero .hero-left{flex:1}
+.hero .hero-title{font-size:38px;margin:0 0 8px;color:var(--blue);font-weight:900}
+.hero .hero-sub{margin:0;color:#444;font-size:16px}
+.hero .hero-right{width:360px;display:flex;justify-content:flex-end}
+.hero .hero-card{width:360px;padding:18px;border-radius:18px;background:var(--glass);backdrop-filter:blur(12px);border:1px solid rgba(0,123,255,0.08);box-shadow:var(--card-shadow)}
+
+/* Layout */
+.main-grid{display:grid;grid-template-columns:1fr 380px;gap:26px;padding:20px}
+@media(max-width:980px){.main-grid{grid-template-columns:1fr}.hero{flex-direction:column}.hero .hero-right{width:100%}.hero .hero-card{width:100%}}
+
+/* Sections inside left column */
+.section-card{background:white;border-radius:14px;padding:18px;border:1px solid rgba(0,0,0,0.04);box-shadow:0 8px 30px rgba(0,0,0,0.04);margin-bottom:18px}
+.section-title{font-size:20px;color:var(--blue);margin:0 0 12px;font-weight:800}
+
+/* three column grid for exercise cards */
+.ex-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+.ex-card{background:linear-gradient(180deg, rgba(255,255,255,0.95), rgba(255,255,255,0.92));padding:14px;border-radius:12px;border:1px solid rgba(0,123,255,0.06);transition:0.28s;cursor:pointer;position:relative;overflow:hidden}
+.ex-card:hover{transform:translateY(-8px);box-shadow:0 18px 40px rgba(0,123,255,0.06)}
+.ex-card h4{margin:6px 0 6px;color:var(--blue);font-weight:800}
+.ex-card p{margin:0;color:#555;font-size:14px}
+
+/* video box */
+.video-box{margin-top:12px;border-radius:12px;overflow:hidden;border:1px solid rgba(0,0,0,0.06)}
+.video-box video{width:100%;display:block}
+
+/* diet tabs */
+.tabs{display:flex;gap:8px;margin-top:10px;flex-wrap:wrap}
+.tab-btn{padding:8px 12px;border-radius:10px;border:1px solid #e6e6e6;background:#fff;cursor:pointer;font-weight:700}
+.tab-btn.active{background:linear-gradient(135deg,var(--blue),var(--green));color:#fff;box-shadow:0 8px 20px rgba(0,255,136,0.12)}
+.tab-content{margin-top:12px;padding:12px;border-radius:10px;background:#fff;border:1px solid rgba(0,0,0,0.04)}
+
+/* Right column: quick tips & CTA */
+.side-card{background:var(--glass);border-radius:14px;padding:16px;border:1px solid rgba(0,123,255,0.08);backdrop-filter:blur(10px);position:sticky;top:20px}
+.side-card h3{margin:0 0 8px;color:var(--blue)}
+.side-list{list-style:none;padding:0;margin:0}
+.side-list li{padding:10px 0;border-bottom:1px dashed rgba(0,0,0,0.04);font-weight:700;color:#333}
+
+/* CTA buttons */
+.btn{display:inline-block;padding:10px 14px;border-radius:12px;text-decoration:none;font-weight:800;background:linear-gradient(135deg,var(--blue),var(--green));color:#fff;box-shadow:0 10px 30px rgba(0,123,255,0.08)}
+.btn.ghost{background:transparent;border:2px solid rgba(0,0,0,0.06);color:var(--text);box-shadow:none}
+
+/* subtle floating animation for hero card */
+@keyframes floaty{0%{transform:translateY(0)}50%{transform:translateY(-8px)}100%{transform:translateY(0)}}
+.hero .hero-card{animation:floaty 6s ease-in-out infinite}
+
+/* small responsive tweaks */
+@media(max-width:520px){
+  .ex-grid{grid-template-columns:1fr}
+  .hero .hero-title{font-size:28px}
+  .main-grid{padding:10px}
+}

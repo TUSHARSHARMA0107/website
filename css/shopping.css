@@ -1,133 +1,127 @@
-body {
-    background: #0d0d0e;
-    color: #fff;
-    padding-top: 90px;
-    font-family: "Segoe UI", sans-serif;
+:root {
+    --blue: #00A2FF;
+    --green: #00FF88;
+    --glass: rgba(255,255,255,0.2);
 }
 
-/* HERO */
+/* HERO SECTION */
 .shop-hero {
     text-align: center;
-    padding: 70px 20px;
-    background: url('../images/fitness-banner.jpg') center/cover no-repeat;
-    position: relative;
-}
-.shop-hero::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(0,0,0,0.55);
-}
-.shop-hero h1, .shop-hero p {
-    position: relative;
-}
-.shop-hero h1 {
-    font-size: 3rem;
-}
-.shop-hero p {
-    font-size: 1.2rem;
-    opacity: .9;
+    padding: 60px 20px;
 }
 
-/* CATEGORY FILTERS */
-.category-section {
-    text-align: center;
-    margin-top: 30px;
+.shop-hero h1 {
+    font-size: 44px;
+    font-weight: 900;
+    background: linear-gradient(135deg, var(--blue), var(--green));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
-.category-btn {
-    background: rgba(255,255,255,0.1);
-    backdrop-filter: blur(10px);
-    padding: 8px 20px;
-    margin: 5px;
-    border-radius: 20px;
-    border: none;
-    color: #fff;
-    cursor: pointer;
-    transition: .3s;
-}
-.category-btn:hover, .category-btn.active {
-    background: #ff8a00;
+
+.shop-hero p {
+    font-size: 18px;
+    color: #444;
 }
 
 /* PRODUCT GRID */
-.product-container {
-    margin-top: 30px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 25px;
-    justify-content: center;
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 35px;
+    padding: 30px;
 }
 
+/* PRODUCT CARDS */
 .product-card {
-    width: 260px;
-    background: rgba(255,255,255,0.08);
+    padding: 20px;
     border-radius: 20px;
-    overflow: hidden;
+    background: var(--glass);
     backdrop-filter: blur(12px);
-    padding-bottom: 18px;
-    box-shadow: 0 0 20px rgba(0,0,0,0.5);
-    transition: .3s;
+    border: 2px solid rgba(255,255,255,0.3);
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0,255,150,0.3);
+    transition: 0.3s;
 }
+
 .product-card:hover {
-    transform: translateY(-8px);
+    transform: translateY(-6px) scale(1.03);
+    box-shadow: 0 0 26px rgba(0,255,150,0.5);
 }
+
 .product-card img {
     width: 100%;
-    height: 170px;
+    height: 180px;
     object-fit: cover;
+    border-radius: 14px;
+    margin-bottom: 12px;
 }
 
-.product-card h3 {
-    margin: 12px 0 5px;
-    text-align: center;
+.product-card h2 {
+    font-size: 20px;
+    font-weight: 800;
+    margin-bottom: 4px;
 }
-.desc {
-    text-align: center;
-    font-size: 0.9rem;
-    color: #ccc;
-}
+
 .price {
-    text-align: center;
-    margin-top: 5px;
-    color: #ff8a00;
-    font-size: 1.1rem;
-    font-weight: 700;
-}
-
-/* BUTTONS */
-.btn-add {
-    width: 80%;
-    margin: 12px auto;
-    display: block;
-    padding: 10px 14px;
-    border-radius: 10px;
-    border: none;
-    background: linear-gradient(135deg,#ff8a00,#e52e71);
-    color: white;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: .3s;
-}
-.btn-add:hover {
-    transform: scale(1.05);
-}
-
-/* CART SECTION */
-#cart-items .cart-item {
-    background: rgba(255,255,255,0.1);
-    padding: 10px 12px;
+    font-size: 18px;
+    color: var(--blue);
     margin-bottom: 10px;
-    border-radius: 12px;
-    display: flex;
-    justify-content: space-between;
 }
-.btn-checkout {
+
+/* BUTTON */
+.product-card button {
+    width: 100%;
+    padding: 12px;
+    border-radius: 12px;
+    border: none;
+    background: linear-gradient(135deg, var(--blue), var(--green));
+    color: white;
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.product-card button:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 0 20px rgba(0,255,150,0.5);
+}
+
+/* CART PANEL */
+.cart-panel {
+    position: fixed;
+    top: 0;
+    right: -350px;
+    width: 300px;
+    height: 100%;
+    background: white;
+    box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+    padding: 20px;
+    transition: 0.4s;
+    z-index: 999;
+}
+
+.cart-panel.active {
+    right: 0;
+}
+
+.total {
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: 900;
+}
+
+.checkout-btn {
     width: 100%;
     padding: 14px;
+    margin-top: 20px;
     border-radius: 12px;
-    background: linear-gradient(135deg,#ff8a00,#e52e71);
-    border: none;
+    background: linear-gradient(135deg, var(--blue), var(--green));
     color: white;
-    font-size: 1rem;
-    cursor: pointer;
+    font-size: 16px;
+    border: none;
+    font-weight: 800;
+}
+.checkout-btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 0 20px rgba(0,255,150,0.5);
 }

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop | Fit N Fine</title>
+
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/shopping.css">
+</head>
+
+<body>
+
+<div id="navbar"></div>
+
+<section class="shop-hero">
+    <h1>Fit N Fine Store</h1>
+    <p>Premium fitness products to boost your journey.</p>
+</section>
+
+<section class="product-grid" id="productGrid">
+
+    <!-- Product 1 -->
+    <div class="product-card glass">
+        <img src="../images/products/dumbbell.jpg" alt="Dumbbell">
+        <h2>Dumbbell Set</h2>
+        <p class="price">₹799</p>
+        <button onclick="addToCart('Dumbbell Set', 799)">Add to Cart</button>
+    </div>
+
+    <!-- Product 2 -->
+    <div class="product-card glass">
+        <img src="../images/products/yoga-mat.jpg" alt="Yoga Mat">
+        <h2>Yoga Mat Premium</h2>
+        <p class="price">₹999</p>
+        <button onclick="addToCart('Yoga Mat Premium', 999)">Add to Cart</button>
+    </div>
+
+    <!-- Product 3 -->
+    <div class="product-card glass">
+        <img src="../images/products/protein.jpg" alt="Protein Powder">
+        <h2>Protein Powder</h2>
+        <p class="price">₹1999</p>
+        <button onclick="addToCart('Protein Powder', 1999)">Add to Cart</button>
+    </div>
+
+    <!-- Product 4 -->
+    <div class="product-card glass">
+        <img src="../images/products/gloves.jpg" alt="Gloves">
+        <h2>Gym Gloves</h2>
+        <p class="price">₹499</p>
+        <button onclick="addToCart('Gym Gloves', 499)">Add to Cart</button>
+    </div>
+
+</section>
+
+<!-- CART PANEL -->
+<div class="cart-panel" id="cartPanel">
+    <h2>Your Cart</h2>
+    <div id="cartItems"></div>
+    <p id="total" class="total">Total: ₹0</p>
+    <button class="checkout-btn">Checkout</button>
+</div>
+
+<div id="footer"></div>
+
+<script src="../js/navbar.js"></script>
+<script src="../js/footer.js"></script>
+<script src="../js/shop.js"></script>
+
+</body>
+</html>

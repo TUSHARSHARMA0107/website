@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Obesity — Fit N Fine</title>
+  <link rel="stylesheet" href="../css/weight-pro.css">
+</head>
+<body>
+  <div id="navbar"></div>
+
+  <main class="container">
+    <section class="hero">
+      <div class="hero-left">
+        <h1 class="hero-title">Obesity Management</h1>
+        <p class="hero-sub">Safety-first approach with low-impact cardio, medical checks, and nutrition-focused plan.</p>
+        <div style="margin-top:14px">
+          <a class="btn" href="../html/contact.html">Consult a Specialist</a>
+          <a class="btn ghost" href="../html/progress.html" style="margin-left:10px">Track Progress</a>
+        </div>
+      </div>
+      <div class="hero-right">
+        <div class="hero-card">
+          <h3 style="margin:0 0 8px">Important</h3>
+          <p class="small">Begin with low-impact activities and medical clearance if needed. Nutrition is critical.</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="main-grid">
+      <div>
+        <section class="section-card">
+          <h3 class="section-title">Exercise Plan</h3>
+          <div class="ex-grid">
+            <div class="ex-card recommend" data-video="../images/exercises/ob-lowimpact.mp4">
+              <h4>Low-Impact Cardio</h4>
+              <p>Walking, aqua, recumbent bike — 20–30 min.</p>
+            </div>
+            <div class="ex-card" data-video="../images/exercises/ob-strength.mp4">
+              <h4>Light Strength</h4>
+              <p>Band & bodyweight sessions 2x/week.</p>
+            </div>
+            <div class="ex-card" data-video="../images/exercises/ob-mobility.mp4">
+              <h4>Mobility</h4>
+              <p>Joint mobility & flexibility.</p>
+            </div>
+          </div>
+
+          <div class="video-box" style="margin-top:12px">
+            <video controls src="" poster="../images/exercises/poster.jpg"></video>
+          </div>
+        </section>
+
+        <section class="section-card">
+          <h3 class="section-title">Diet Guidance</h3>
+          <div class="tab-group">
+            <div class="tabs">
+              <button class="tab-btn active" data-tab="ob-veg">Vegetarian</button>
+              <button class="tab-btn" data-tab="ob-nonveg">Non-veg</button>
+            </div>
+
+            <div id="ob-veg" class="tab-content" style="display:block">
+              <ul>
+                <li>Breakfast: Oat porridge + seeds</li>
+                <li>Lunch: Vegetable stew + salad</li>
+                <li>Snack: Fruit + nuts (controlled)</li>
+                <li>Dinner: Soups + grilled veg</li>
+              </ul>
+            </div>
+
+            <div id="ob-nonveg" class="tab-content" style="display:none">
+              <ul>
+                <li>Breakfast: Egg whites + veggies</li>
+                <li>Lunch: Lean chicken + salad</li>
+                <li>Snack: Greek yogurt small portion</li>
+                <li>Dinner: Light fish + veg soup</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <aside>
+        <div class="side-card">
+          <h3>Safety Notes</h3>
+          <ul class="side-list">
+            <li>Consult physician</li>
+            <li>Monitor blood pressure</li>
+            <li>Start slow & progress</li>
+            <li>Hydration & sleep</li>
+          </ul>
+        </div>
+
+        <div class="side-card" style="margin-top:16px">
+          <h3>Recommended</h3>
+          <a class="btn" href="../html/contact.html">Book Consultation</a>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <div id="footer"></div>
+
+  <script src="../js/navbar.js"></script>
+  <script src="../js/footer.js"></script>
+  <script src="../js/weight-pro.js"></script>
+</body>
+</html>

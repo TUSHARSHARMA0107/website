@@ -1,6 +1,6 @@
 :root {
-    --primary: #ff3b6a;
-    --primary-soft: #ff9ab6;
+    --primary: #ff8a00;
+    --primary-soft: #ffc140;
     --text-dark: #222;
     --text-light: #555;
     --card-bg: #ffffffcc;
@@ -8,14 +8,14 @@
 
 body {
     margin: 0;
-    background: #fff4f6;
+    background: #fff7e9;
     font-family: Poppins, sans-serif;
 }
 
 /* HERO */
 .hero {
     height: 38vh;
-    background: linear-gradient(to right, #ff3b6a, #ff9ab6);
+    background: linear-gradient(to right, #ff8a00, #ffc140);
     display: flex;
     align-items: flex-end;
     padding: 40px;
@@ -33,7 +33,7 @@ body {
     opacity: 0.9;
 }
 
-/* SECTIONS */
+/* SECTION */
 .section {
     padding: 45px 20px;
     text-align: center;
@@ -51,7 +51,7 @@ body {
     color: var(--text-light);
 }
 
-/* CARDS */
+/* CARD GRID */
 .card-grid {
     display: flex;
     gap: 22px;
@@ -65,14 +65,14 @@ body {
     border-radius: 18px;
     padding-bottom: 15px;
     backdrop-filter: blur(12px);
-    box-shadow: 0 10px 20px rgba(255, 50, 80, 0.15);
+    box-shadow: 0 10px 20px rgba(255, 138, 0, 0.15);
     transition: .3s ease;
     cursor: pointer;
 }
 
 .card:hover {
     transform: translateY(-6px);
-    box-shadow: 0 20px 30px rgba(255, 50, 80, 0.25);
+    box-shadow: 0 20px 30px rgba(255, 138, 0, 0.25);
 }
 
 .card img {
@@ -80,16 +80,6 @@ body {
     height: 170px;
     object-fit: cover;
     border-radius: 18px 18px 0 0;
-}
-
-.card h3 {
-    margin: 12px 0 6px;
-    color: var(--primary);
-}
-
-.card p {
-    padding: 0 14px;
-    color: var(--text-light);
 }
 
 /* VIDEO PLAYER */
@@ -139,5 +129,5 @@ video {
     width: 80%;
     border-left: 5px solid var(--primary);
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    box-shadow: 0 4px 10px rgba(0,0,0,.05);
 }

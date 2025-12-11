@@ -1,13 +1,125 @@
-/* navbar.css */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700;800&display=swap');
-.logo{height:42px;margin-right:10px}
-.brand{font-weight:800;color:var(--blue);font-size:20px;vertical-align:middle}
-.glass-navbar{display:flex;align-items:center;justify-content:space-between;padding:14px 0;backdrop-filter:blur(14px);background:var(--glass);border-bottom:2px solid var(--blue);position:sticky;top:0;z-index:999}
-.glass-navbar a{margin-left:22px;text-decoration:none;color:var(--text);font-weight:600;transition:0.18s}
-.glass-navbar a:hover{color:var(--green);text-shadow:0 0 10px rgba(0,255,136,0.25)}
-.hamburger{display:none;font-size:26px;color:var(--blue);cursor:pointer}
-.mobile-menu{display:none;padding:14px 20px;background:var(--glass);border-bottom:2px solid var(--blue)}
-.mobile-menu a{display:block;padding:12px 0;color:var(--text);text-decoration:none}
-.mobile-menu.show{display:block}
-@media(max-width:820px){.nav-links{display:none}.hamburger{display:block}}
-.brand-wrap{display:flex;align-items:center;text-decoration:none}
+:root {
+    --blue: #007BFF;
+    --green: #00FF88;
+    --dark: #0B0F14;
+}
+
+.premium-nav {
+    background: rgba(255,255,255,0.75);
+    backdrop-filter: blur(10px);
+    border-bottom: 2px solid rgba(0,123,255,0.2);
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+/* MAIN NAV CONTAINER */
+.nav-container {
+    max-width: 1200px;
+    padding: 12px 20px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* LOGO SECTION */
+.nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.nav-logo img {
+    width: 45px;
+}
+
+.nav-logo span {
+    font-size: 26px;
+    font-weight: 900;
+    background: linear-gradient(135deg, var(--blue), var(--green));
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+/* DESKTOP LINKS */
+.nav-links {
+    display: flex;
+    gap: 22px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    font-weight: 700;
+    color: var(--dark);
+    transition: 0.25s;
+    position: relative;
+}
+
+/* Glow on hover */
+.nav-links a:hover {
+    color: var(--blue);
+    text-shadow: 0 0 10px rgba(0,255,136,0.5);
+}
+
+/* LOGIN BUTTON */
+.nav-login {
+    padding: 8px 14px;
+    background: linear-gradient(135deg, var(--blue), var(--green));
+    border-radius: 10px;
+    color: white !important;
+    box-shadow: 0 0 12px rgba(0,255,136,0.2);
+}
+
+/* HAMBURGER ICON */
+.nav-ham {
+    display: none;
+    font-size: 26px;
+    cursor: pointer;
+}
+
+/* MOBILE MENU */
+.nav-mobile {
+    display: none;
+    flex-direction: column;
+    background: rgba(255,255,255,0.97);
+    padding: 14px 20px;
+    border-bottom: 2px solid rgba(0,123,255,0.15);
+}
+
+.nav-mobile a {
+    padding: 10px 0;
+    text-decoration: none;
+    font-weight: 700;
+    color: var(--dark);
+}
+
+.nav-login-mobile {
+    background: linear-gradient(135deg, var(--blue), var(--green));
+    border-radius: 10px;
+    padding: 8px;
+    color: white !important;
+    margin-top: 6px;
+}
+
+/* ACTIVE DROPDOWN */
+.nav-mobile.active {
+    display: flex;
+}
+
+/* RESPONSIVE MODE */
+@media(max-width: 850px) {
+    .nav-links {
+        display: none;
+    }
+
+    .nav-ham {
+        display: block;
+    }
+}
+@media(max-width: 500px) {
+    .nav-logo span {
+        font-size: 22px;
+    }
+}

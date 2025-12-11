@@ -1,124 +1,110 @@
-:root{
-    --blue:#007BFF;
-    --green:#00FF88;
-    --dark:#111;
+:root {
+    --neon-blue: #00aaff;
+    --neon-green: #00ff99;
+    --dark-bg: #0a0f14;
+    --glass-bg: rgba(255, 255, 255, 0.15);
 }
 
-.uni-footer{
-    background:#F6F8FB;
-    margin-top:40px;
-    border-top:3px solid rgba(0,123,255,0.25);
-    font-family:Poppins, sans-serif;
+/* FOOTER MAIN */
+.pro-footer {
+    margin-top: 60px;
+    background: var(--dark-bg);
+    padding-top: 40px;
+    width: 100%;
+    color: white;
+    font-family: 'Poppins', sans-serif;
 }
 
-.footer-top{
-    max-width:1200px;
-    margin:auto;
-    padding:30px 20px;
-    display:flex;
-    justify-content:space-between;
-    flex-wrap:wrap;
-    gap:40px;
+/* GLASS CARD */
+.footer-glass {
+    max-width: 1200px;
+    margin: auto;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap;
+    border-radius: 20px;
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.footer-logo{
-    width:70px;
-    margin-bottom:10px;
+/* BRAND */
+.footer-logo {
+    width: 80px;
+    filter: drop-shadow(0 0 8px var(--neon-green));
 }
 
-.footer-brand h2{
-    background:linear-gradient(135deg,var(--blue),var(--green));
-    -webkit-background-clip:text;
-    color:transparent;
-    font-size:26px;
-    font-weight:900;
+.footer-brand h2 {
+    background: linear-gradient(135deg, var(--neon-blue), var(--neon-green));
+    -webkit-background-clip: text;
+    color: transparent;
+    font-size: 28px;
+    font-weight: 800;
 }
 
-.footer-brand p{
-    max-width:260px;
-    color:#555;
-    font-weight:600;
+.footer-brand p {
+    opacity: 0.8;
+    font-size: 15px;
 }
 
-.footer-links{
-    display:flex;
-    flex-direction:column;
-    gap:10px;
+/* LINKS */
+.footer-links h3,
+.footer-social h3 {
+    color: var(--neon-green);
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-weight: 700;
 }
 
-.footer-links h4{
-    color:var(--blue);
-    font-weight:900;
-    margin-bottom:6px;
+.footer-links a {
+    text-decoration: none;
+    color: #d8d8d8;
+    margin-bottom: 6px;
+    display: block;
+    font-weight: 500;
+    transition: 0.3s;
 }
 
-.footer-links a{
-    color:var(--dark);
-    text-decoration:none;
-    font-weight:700;
-    transition:0.25s;
+.footer-links a:hover {
+    color: var(--neon-blue);
+    transform: translateX(6px);
 }
 
-.footer-links a:hover{
-    color:var(--blue);
-    text-shadow:0 0 6px rgba(0,255,136,0.45);
+/* SOCIAL ICONS */
+.social-row a {
+    color: var(--neon-green);
+    margin-right: 14px;
+    font-size: 28px;
+    transition: 0.3s;
 }
 
-.footer-login{
-    background:linear-gradient(135deg,var(--blue),var(--green));
-    padding:8px 14px;
-    border-radius:10px;
-    color:white!important;
-    margin-top:5px;
+.social-row a:hover {
+    color: var(--neon-blue);
+    text-shadow: 0 0 10px var(--neon-green);
+    transform: scale(1.2);
 }
 
-.footer-social h4{
-    margin-bottom:8px;
-    font-weight:900;
-    color:var(--blue);
+/* COPYRIGHT BAR */
+.footer-bottom {
+    margin-top: 20px;
+    text-align: center;
+    padding: 12px;
+    font-size: 14px;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    background: #05080b;
 }
 
-.social-row img{
-    width:35px;
-    margin-right:10px;
-    cursor:pointer;
-    transition:0.25s;
-}
+/* MOBILE */
+@media (max-width: 850px) {
+    .footer-glass {
+        text-align: center;
+        flex-direction: column;
+    }
 
-.social-row img:hover{
-    transform:scale(1.15);
-}
-
-.footer-bottom{
-    background:#EAF0F5;
-    text-align:center;
-    padding:12px 0;
-    font-weight:700;
-    color:#444;
-    border-top:1px solid rgba(0,0,0,0.1);
-}
-
-/* ===== MOBILE MINI NAVBAR ===== */
-.mini-nav{
-    display:none;
-    position:fixed;
-    bottom:0;
-    left:0;
-    right:0;
-    background:white;
-    padding:12px 0;
-    border-top:2px solid rgba(0,123,255,0.25);
-    justify-content:space-around;
-}
-
-.mini-nav a{
-    font-size:23px;
-    color:var(--blue);
-}
-
-/* SHOW MINI NAV ON MOBILE */
-@media(max-width:850px){
-    .mini-nav{
-        display:flex;
+    .social-row {
+        justify-content: center;
+        display: flex;
     }
 }

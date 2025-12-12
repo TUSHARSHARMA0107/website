@@ -5,4 +5,4 @@ A fully responsive, premium fitness website built using HTML, CSS, and JavaScrip
 This project is designed to be lightweight, fast, reusable, and highly scalable, while maintaining a premium fitness-brand feel.
 
 
-LIVE URL =https://website-seven-theta-19.vercel.app/
+LIVE URL =https://website-seven-theta-19.vercel.app/-

@@ -24,10 +24,11 @@ document.addEventListener("DOMContentLoaded", () => {
                 <div class="footer-social">
                     <h3>Follow Us</h3>
                     <div class="social-row">
-                        <a href="../images/footer image/service/i1.jpg"><i class="fab fa-instagram"></i></a>
-                        <a href="../images/footer image/service/i2.jpg"><i class="fab fa-twitter"></i></a>
-                        <a href="../images/footer image/service/i3.jpg"><i class="fab fa-facebook"></i></a>
-                        <a href="mailto:fitnfine@gmail.com"><i class="fas fa-envelope"></i></a>
+                        <a href="../foooter/images/insta.jpg"><i class="fab fa-instagram"></i></a>
+                        <a href="../foooter/images/twitteer.png"><i class="fab fa-twitter"></i></a>
+                        <a href="../foooter/images/facebook.png"><i class="fab fa-facebook"></i></a>
+                          <a href="../foooter/images/mail.png"><i class="fab fa-Gmail"></i></a>
+                         <a href="../foooter/images/contact.png"><i class="fab fa-Contact"></i></a>
                     </div>
                 </div>
 

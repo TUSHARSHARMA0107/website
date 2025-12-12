@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             <!-- Logo Section -->
             <div class="nav-logo" onclick="window.location.href='../html/home.html'">
-                <img src="../images/logo.png" alt="Logo">
+                <img src="../navbar/logo.jpg" alt="Logo">
                 <span>Fit N Fine</span>
             </div>
 
@@ -15,10 +15,10 @@ document.addEventListener("DOMContentLoaded", () => {
             <div class="nav-links">
                 <a href="../html/home.html">Home</a>
                 <a href="../html/bmi.html">BMI</a>
-                <a href="../html/service-pro.html">Services</a>
+                <a href="../html/service.html">Services</a>
                 <a href="../html/shopping.html">Shop</a>
-                <a href="../html/progress.html">Progress</a>
-                <a href="../html/contact.html">Contact</a>
+                <a href="../html/progresstracker.html">Progress</a>
+                <a href="../html/contact us.html">Contact</a>
                 <a href="../html/login.html" class="nav-login">Login</a>
             </div>
 
@@ -30,12 +30,12 @@ document.addEventListener("DOMContentLoaded", () => {
         <!-- Mobile Dropdown -->
         <div class="nav-mobile">
             <a href="../html/home.html">Home</a>
-            <a href="../html/bmi.html">BMI</a>
-            <a href="../html/service-pro.html">Services</a>
-            <a href="../html/shopping.html">Shop</a>
-            <a href="../html/progress.html">Progress</a>
-            <a href="../html/contact.html">Contact</a>
-            <a href="../html/login.html" class="nav-login-mobile">Login</a>
+                <a href="../html/bmi.html">BMI</a>
+                <a href="../html/service.html">Services</a>
+                <a href="../html/shopping.html">Shop</a>
+                <a href="../html/progresstracker.html">Progress</a>
+                <a href="../html/contact us.html">Contact</a>
+                <a href="../html/login.html" class="nav-login">Login</a>
         </div>
 
     </nav>

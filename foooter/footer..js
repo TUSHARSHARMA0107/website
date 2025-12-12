@@ -2,9 +2,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const footer = document.getElementById("footer");
 
     footer.innerHTML = `
-        <footer class="pro-footer">
-            <div class="footer-glass">
-                
+        <footer class="footer-light">
+            <div class="footer-container">
+
                 <div class="footer-brand">
                     <img src="../images/logo.png" class="footer-logo" />
                     <h2>Fit N Fine</h2>
@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
                         <a href="https://instagram.com"><i class="fab fa-instagram"></i></a>
                         <a href="https://twitter.com"><i class="fab fa-twitter"></i></a>
                         <a href="https://facebook.com"><i class="fab fa-facebook"></i></a>
-                        <a href="mailto:tushar@gmail.com"><i class="fas fa-envelope"></i></a>
+                        <a href="mailto:fitnfine@gmail.com"><i class="fas fa-envelope"></i></a>
                     </div>
                 </div>
 

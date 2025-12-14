@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
         else if (bmi >= 18.5 && bmi < 25) {
             category = "Normal Weight";
             message = "Great job! Maintain your shape with balanced workouts.";
-            link = "../html/normal.html";
+            link = "../html/normalweight.html";
         }
         else if (bmi >= 25 && bmi < 30) {
             category = "Overweight";
@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", () => {
         else {
             category = "Obese";
             message = "Health risk is higher. Start a controlled diet + low-impact exercises.";
-            link = "../html/obese.html";
+            link = "../html/normalweight.html";
         }
 
         bmiCategoryText.textContent = "Category: " + category;
